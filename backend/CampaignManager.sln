@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A9241C59-00C7-4A9E-A0F2-ECBB309CC14D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{FE838754-1C87-4E65-9E6D-A8729F6A6D78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{E3B38E3E-4E3A-4779-B3BE-7CD6AFA24ACA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{FB7D71E5-38E0-4F9F-BCB7-D8985BE56D7F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CampaignManager.Api", "API\CampaignManager.Api\CampaignManager.Api.csproj", "{93623006-6AEA-48B8-8264-E03F48760548}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CampaignManager.Business.Services", "Business\CampaignManager.Business.Services\CampaignManager.Business.Services.csproj", "{866CE54E-76F8-4F9C-8B0A-CA76D71CEA57}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CampaignManager.Data", "Data\CampaignManager.Data\CampaignManager.Data.csproj", "{A38D5760-E787-4054-B46E-697439F1A50D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CampaignManager.Infrastructure.Common", "Infrastructure\CampaignManager.Infrastructure.Common\CampaignManager.Infrastructure.Common.csproj", "{DFAA29E8-452F-4F18-9CA2-3D9D18E57CB4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CampaignManager.Infrastructure.Communication", "Infrastructure\CampaignManager.Infrastructure.Communication\CampaignManager.Infrastructure.Communication.csproj", "{7DFBA5F8-2CF8-468F-A268-DB06B459C19C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CampaignManager.Infrastructure.Models", "Infrastructure\CampaignManager.Infrastructure.Models\CampaignManager.Infrastructure.Models.csproj", "{F0C35F75-630C-4271-A6C3-C9F47D13558C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampaignManager.Business.ServicesTests", "Business\CampaignManager.Business.ServicesTests\CampaignManager.Business.ServicesTests.csproj", "{DBA2E17E-3C21-4E67-A803-E55609322720}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93623006-6AEA-48B8-8264-E03F48760548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93623006-6AEA-48B8-8264-E03F48760548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93623006-6AEA-48B8-8264-E03F48760548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93623006-6AEA-48B8-8264-E03F48760548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{866CE54E-76F8-4F9C-8B0A-CA76D71CEA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{866CE54E-76F8-4F9C-8B0A-CA76D71CEA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{866CE54E-76F8-4F9C-8B0A-CA76D71CEA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{866CE54E-76F8-4F9C-8B0A-CA76D71CEA57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A38D5760-E787-4054-B46E-697439F1A50D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A38D5760-E787-4054-B46E-697439F1A50D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A38D5760-E787-4054-B46E-697439F1A50D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A38D5760-E787-4054-B46E-697439F1A50D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFAA29E8-452F-4F18-9CA2-3D9D18E57CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFAA29E8-452F-4F18-9CA2-3D9D18E57CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFAA29E8-452F-4F18-9CA2-3D9D18E57CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFAA29E8-452F-4F18-9CA2-3D9D18E57CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DFBA5F8-2CF8-468F-A268-DB06B459C19C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DFBA5F8-2CF8-468F-A268-DB06B459C19C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DFBA5F8-2CF8-468F-A268-DB06B459C19C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DFBA5F8-2CF8-468F-A268-DB06B459C19C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0C35F75-630C-4271-A6C3-C9F47D13558C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0C35F75-630C-4271-A6C3-C9F47D13558C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0C35F75-630C-4271-A6C3-C9F47D13558C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0C35F75-630C-4271-A6C3-C9F47D13558C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA2E17E-3C21-4E67-A803-E55609322720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA2E17E-3C21-4E67-A803-E55609322720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA2E17E-3C21-4E67-A803-E55609322720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA2E17E-3C21-4E67-A803-E55609322720}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{93623006-6AEA-48B8-8264-E03F48760548} = {FE838754-1C87-4E65-9E6D-A8729F6A6D78}
+		{866CE54E-76F8-4F9C-8B0A-CA76D71CEA57} = {E3B38E3E-4E3A-4779-B3BE-7CD6AFA24ACA}
+		{A38D5760-E787-4054-B46E-697439F1A50D} = {FB7D71E5-38E0-4F9F-BCB7-D8985BE56D7F}
+		{DFAA29E8-452F-4F18-9CA2-3D9D18E57CB4} = {A9241C59-00C7-4A9E-A0F2-ECBB309CC14D}
+		{7DFBA5F8-2CF8-468F-A268-DB06B459C19C} = {A9241C59-00C7-4A9E-A0F2-ECBB309CC14D}
+		{F0C35F75-630C-4271-A6C3-C9F47D13558C} = {A9241C59-00C7-4A9E-A0F2-ECBB309CC14D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1AD69086-1007-4576-92E1-8C0B60BD28F7}
+	EndGlobalSection
+EndGlobal
