@@ -1,16 +1,8 @@
-﻿using CampaignManager.Business.Services.Services;
-using CampaignManager.Business.ServicesTests.Common;
-using CampaignManager.Data.IRepository;
-using CampaignManager.Infrastructure.Models.CampaignModel.RequestModel;
+﻿using CampaignManager.Business.Services.Services; 
+using CampaignManager.Data.IRepository; 
 using CampaignManager.Infrastructure.Models.DBModels;
-using CampaignManager.Infrastructure.Models.User.RequestModel;
-using Microsoft.AspNetCore.Identity;
-using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CampaignManager.Infrastructure.Models.User.RequestModel; 
+using Moq; 
 using Xunit;
 
 namespace CampaignManager.Business.ServicesTests.Services
