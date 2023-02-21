@@ -29,9 +29,7 @@ app.UseCors(options => options
                           "http://localhost:8080",
                           "http://*.localhost:8080", 
                           "http://*.localhost:3001",
-                          "http://*.localhost:3002",
-                          "https://*.troonlab.io",
-                          "https://*.troontech.com"
+                          "http://*.localhost:3002"
                           )
              .AllowAnyHeader()
              .AllowAnyMethod()
