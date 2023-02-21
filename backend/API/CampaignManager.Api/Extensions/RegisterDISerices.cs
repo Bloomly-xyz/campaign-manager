@@ -1,7 +1,6 @@
 ﻿using Amazon.Runtime; 
 using Amazon.SecretsManager;
 using CampaignManager.Data.Context;
-using CampaignManager.Infrastructure.Common.HttpClient;
 using CampaignManager.Infrastructure.Common.Utils;
 using CampaignManager.Infrastructure.Models.ConfigModels;
 using Microsoft.EntityFrameworkCore;
@@ -105,7 +104,6 @@ namespace CampaignManager.Api.Extensions
 
             #region Inject Communication Services
             builder.Services.AddScoped<IUtilService, UtilService>();
-            builder.Services.AddScoped<IHttpCall, HttpCall>();
             builder.Services.AddScoped<ISafeOperationExecutor, SafeOperationExecutor>();
             builder.Services.AddScoped<IDBOperationExecutor, DBOperationExecutor>();
             builder.Services.AddScoped<ICache, AzureRedisCache>();
