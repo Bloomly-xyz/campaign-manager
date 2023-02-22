@@ -1,8 +1,8 @@
-# Campaign Manager - [Swagger]()
+# Campaign Manager - [Swagger](https://campaignmanager-api.bloomly.xyz/swagger/index.html)
 
-**The problem it solves:** The aim and objectives of your project, and why should people use it? (2k word count) 
+**The problem it solves:** The aim and objectives of our project, and why should people use it?
 
-Up until now, there are thousands of NFT projects in the market, some successful and some rug pulls. The missing piece is the value or utility it provides. The successful drops share their utility in discord or twitter posts. If you’re not waking up and tweeting #wagmi you’re missing out. This is where our campaign manager comes in. It attaches utility to your nft collection and presents it to your community who can then claim it. Once claimed, the creator can provide further value to the community based on their engagement and the community stays up to date by receiving notifications thus no longer having to scroll thru feeds & tons of messages
+**Up until now**, there are thousands of NFT projects in the market, some successful and some rug pulls. The missing piece is the value or utility it provides. The successful drops share their utility in discord or twitter posts. If you’re not waking up and tweeting #wagmi you’re missing out. This is where our campaign manager comes in. It attaches utility to your nft collection and presents it to your community who can then claim it. Once claimed, the creator can provide further value to the community based on their engagement and the community stays up to date by receiving notifications thus no longer having to scroll thru feeds & tons of messages
 
 
 
