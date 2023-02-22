@@ -24,6 +24,9 @@ namespace CampaignManager.Infrastructure.Models.CampaignModel.RequestModel
         public string? ContractStoragePath { get; set; }
         public string? CollectionPublicPath { get; set; }
         public string? CampaignJson { get; set; }
+        public string? BlockChainJson { get; set; }
+        public string? BlockChainTransactionId { get; set; }
+        public bool IsActive { get; set; }
         public  int UserId { get; set; }
         public List<CampainUtilitiesRequest>? CampaignUtilities { get; set; }
         public string? CampaignPublicUrl { get; set; }

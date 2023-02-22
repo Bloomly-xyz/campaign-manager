@@ -29,6 +29,8 @@ namespace CampaignManager.Infrastructure.Models.CampaignModel.ResponseModel
         public int? UserId { get; set; }
         public List<CampainUtilitiesRequest> CampaignUtilities { get; set; }
         public string CampaignPublicUrl { get; set; }
+        public string BlockChainJson { get; set; }
+        public string BlockChainTransactionId { get; set; }
 
     }
 
