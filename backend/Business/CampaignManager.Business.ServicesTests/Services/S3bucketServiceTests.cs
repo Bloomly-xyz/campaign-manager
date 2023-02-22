@@ -6,10 +6,8 @@ using CampaignManager.Infrastructure.Common.GenericResponses;
 using CampaignManager.Infrastructure.Common.Operation;
 using CampaignManager.Infrastructure.Communication.AWS.S3Services.Bucket;
 using CampaignManager.Infrastructure.Communication.AWS.S3Services.File;
-using CampaignManager.Infrastructure.Models.AWS.RequestModels;
-using CampaignManager.Infrastructure.Models.ConfigModels;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Internal;
+using CampaignManager.Infrastructure.Models.AWS.RequestModels; 
+using Microsoft.AspNetCore.Http; 
 using Microsoft.Extensions.Logging;
 using Moq;
 using Xunit;
@@ -55,5 +53,19 @@ namespace CampaignManager.Business.ServicesTests.Services
             //ASSERT
             Assert.NotNull(mockResponse);
         }
+
+        [Fact]
+        public async Task UploadImage_Test_WithFailureResponse()
+        {
+            //ARRANGE 
+            _fileService.Setup(x => x.UploadFileAsync(It.IsAny<AWSS3RequestModel>(), It.IsAny<bool>())).ReturnsAsync(new GenericApiResponse<PutObjectResponse>());
+
+            //ACT
+            var mockResponse = await _s3BucketService.UploadImage(new UploadFileRequest());
+
+            //ASSERT
+            Assert.NotNull(mockResponse);
+        }
+
     }
 }
