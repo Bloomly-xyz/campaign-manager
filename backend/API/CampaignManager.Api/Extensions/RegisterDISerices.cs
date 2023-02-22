@@ -16,6 +16,8 @@ using CampaignManager.Business.Services.Interfaces;
 using CampaignManager.Business.Services.Services;
 using CampaignManager.Data.IRepository;
 using CampaignManager.Data.Repository;
+using CampaignManager.Infrastructure.Communication.AWS.S3Services.Bucket;
+using CampaignManager.Infrastructure.Communication.AWS.S3Services.File;
 
 namespace CampaignManager.Api.Extensions
 {
@@ -99,15 +101,19 @@ namespace CampaignManager.Api.Extensions
             builder.Services.AddScoped<IS3bucketService, S3bucketService>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ICampaignService, CampaignService>();
+            builder.Services.AddScoped<IUtilityService, UtilityService>();
             #endregion Inject Business Services 
 
             #region Inject Data Services
             builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<IUtilityRepository, UtilityRepository>();
             builder.Services.AddScoped<ICampaignRepository, CampaignRepository>();
             #endregion Inject Data Services
 
             #region Inject Configurations
             builder.Services.Configure<AWSS3Config>(builder.Configuration.GetSection("AWSS3Config"));
+            builder.Services.AddScoped<IBucketService, BucketService>();
+            builder.Services.AddScoped<IFileService, FileService>();
             #endregion Inject Configurations
 
             #region Inject Communication Services
