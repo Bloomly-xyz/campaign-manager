@@ -9,19 +9,16 @@
   <ItemGroup>
     <Compile Remove="AccountModels\**" />
     <Compile Remove="Asset\**" />
-    <Compile Remove="AWS\**" />
     <Compile Remove="BlockChainModels\**" />
     <Compile Remove="DropAssets\**" />
     <Compile Remove="Theme\**" />
     <EmbeddedResource Remove="AccountModels\**" />
     <EmbeddedResource Remove="Asset\**" />
-    <EmbeddedResource Remove="AWS\**" />
     <EmbeddedResource Remove="BlockChainModels\**" />
     <EmbeddedResource Remove="DropAssets\**" />
     <EmbeddedResource Remove="Theme\**" />
     <None Remove="AccountModels\**" />
     <None Remove="Asset\**" />
-    <None Remove="AWS\**" />
     <None Remove="BlockChainModels\**" />
     <None Remove="DropAssets\**" />
     <None Remove="Theme\**" />
