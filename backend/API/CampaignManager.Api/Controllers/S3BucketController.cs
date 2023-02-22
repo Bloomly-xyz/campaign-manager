@@ -18,6 +18,22 @@ namespace CampaignManager.Api.Controllers
             _S3Bucketservice = s3BucketService;
         }
 
+        /// <summary>
+        /// Upload File, An API end point that can upload file(image,Video) on Cloud S3 bucket, based on the user selection file. 
+        /// </summary>
+        /// <param name="uploadFileRequest"></param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /api/S3Bucket/upload_image
+        ///             {
+        ///               AvatarFile: File,
+        ///               BannerFile: File
+        ///             }
+        /// </remarks>
+        /// <response code="200">Returns success response</response>
+        /// <response code="500">If exception failed</response> 
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [AllowAnonymous]
@@ -32,30 +48,5 @@ namespace CampaignManager.Api.Controllers
             else
                 return GenericApiResponse(default(IActionResult), result.message, result.status, result.Exception, result.Succeeded);
         }
-
-       
-        //[HttpPost("calling")]
-        //public async Task<IActionResult> Calling()
-        //{
-        //    return GenericApiResponse(default(IActionResult), "Calling", HttpStatusCode.OK, null, true);
-        //}
-
-
-        //[AllowAnonymous]
-        //[HttpGet("SendTestEmail")]
-        //public async Task<IActionResult> SendTestEmail(string template)
-        //{
-        //    List<string> recipients = new List<string>();
-        //    recipients.Add("noumankhan@troontechnologies.com");
-        //    SqsMessageModel sqsMessageModel = new SqsMessageModel
-        //    {
-        //        Subject = "Sucessfull Blocto Payment!",
-        //        Recipients = recipients,
-        //        TemplateType = template,
-        //    };
-        //    await _SQSEmailService.SendEmailViaSQS(sqsMessageModel);
-        //    return Ok();
-        //}
-
     }
 }

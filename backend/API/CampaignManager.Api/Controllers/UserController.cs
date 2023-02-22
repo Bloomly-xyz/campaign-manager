@@ -14,6 +14,7 @@ namespace CampaignManager.Api.Controllers
         {
             _userService = userService;
         }
+
         /// <summary>
         /// Create User in a database with Blocto Address.
         /// </summary>
@@ -25,7 +26,7 @@ namespace CampaignManager.Api.Controllers
         ///     POST /api/User/create_user
         ///     {
         ///        "EmailAddress": "test@CampaignManager.xyz",
-        ///        "WalletAddress": "x123213213hkjxac"
+        ///        "WalletAddress": "x0123213213hkjxac"
         ///     }
         /// </remarks>
         /// <response code="200">Returns success response</response>
