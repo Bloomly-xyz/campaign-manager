@@ -12,6 +12,11 @@ using System.Reflection;
 using CampaignManager.Infrastructure.Common.Operation;
 using CampaignManager.Infrastructure.Common.Cache;
 using CampaignManager.Data.Core;
+using CampaignManager.Business.Services.Interfaces;
+using CampaignManager.Business.Services.Services;
+using CampaignManager.Data.IRepository;
+using CampaignManager.Data.Repository;
+
 namespace CampaignManager.Api.Extensions
 {
     public static class RegisterDISerices
@@ -91,11 +96,14 @@ namespace CampaignManager.Api.Extensions
             #endregion Identity
 
             #region Inject Business Services 
-
+            builder.Services.AddScoped<IS3bucketService, S3bucketService>();
+            builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<ICampaignService, CampaignService>();
             #endregion Inject Business Services 
 
             #region Inject Data Services
-
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<ICampaignRepository, CampaignRepository>();
             #endregion Inject Data Services
 
             #region Inject Configurations
