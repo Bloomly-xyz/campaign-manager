@@ -83,6 +83,8 @@ const SelectContract = (props) => {
                   className="w-full py-3 border-none font-medium focus-visible:outline-0 bg-transparent  placeholder:text-[#12221A] focus:ring-transparent "
                   type="text"
                   onChange={NFTAddressSearchHandler}
+                  disabled={nftContractData?.isDemoCollection ? true : false}
+                  readOnly={nftContractData?.contractStoragePath ? true:false}
                 />
 
               </div>
@@ -151,6 +153,7 @@ const SelectContract = (props) => {
                 <div className="flex border-t-0 border-r-0 border-l-0 border-b-2 border-zinc-600 border-[#12221A]/10">
                   <input
                     readOnly={nftContractData?.contractStoragePath ? true:false}
+                  disabled={nftContractData?.isDemoCollection ? true : false}
                     value={nftContractData?.contractStoragePath}
                     onChange={(e) => inputPathHandler(e, "storagePath")}
                     placeholder={nftContractData?.contractStoragePath}
@@ -185,6 +188,7 @@ const SelectContract = (props) => {
                 <div className="flex border-t-0 border-r-0 border-l-0 border-b-2 border-zinc-600 border-[#12221A]/10">
                   <input
                   readOnly={nftContractData?.collectionPublicPath ? true:false}
+                  disabled={nftContractData?.isDemoCollection ? true : false}
                     value={nftContractData?.collectionPublicPath}
                     onChange={(e) => inputPathHandler(e, "collectionPath")}
                     placeholder={nftContractData?.collectionPublicPath}

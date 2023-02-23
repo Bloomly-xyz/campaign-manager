@@ -19,9 +19,15 @@ const CreateClaimUtility = (claimJson ,campaignUuid , userId,blockChainTransacti
     return response?.data;
   });
 };
+const getClaimUtility = (payload) => {
+  return postRequest(`Utility/get_claimed_utility`, payload).then((response) => {
+    return response?.data;
+  });
+};
 
 const ClaimUtilityService = {
   getClaimUtilityData,
-  CreateClaimUtility
+  CreateClaimUtility,
+  getClaimUtility
 };
 export default ClaimUtilityService;

@@ -11,7 +11,8 @@ const CommunityTargeting = (props) => {
     steps,
     setActiveStep,
     nextBtnClickHandler,
-    setNFTContractData
+    setNFTContractData,
+    isDemo
   } = props;
 
   const handleBack =() => {
@@ -89,6 +90,38 @@ const CommunityTargeting = (props) => {
 
         {selectCollection === 2 && (
           <>
+            {isDemo && (
+              <>
+              <div className="bg-[#F3F4F4] p-4 max-w-[494px] mt-6 rounded-lg mb-10">
+              <div className="flex justify-between">
+                <div>
+                  <AttachUtilitySquareCheckbox
+                    checkedIcon={images.CustomCheckedIcon}
+                    label={"Base Set "}
+                    checked={false}
+                  />
+                </div>
+                <div>
+                  <img src={images.ChevronDown} alt="icon" />
+                </div>
+              </div>
+            </div>
+            <div className="bg-[#F3F4F4] p-4 max-w-[494px] mt-6 rounded-lg mb-10">
+            <div className="flex justify-between">
+              <div>
+                <AttachUtilitySquareCheckbox
+                  checkedIcon={images.CustomCheckedIcon}
+                  label={"Series "}
+                  checked={false}
+                />
+              </div>
+              <div>
+                <img src={images.ChevronDown} alt="icon" />
+              </div>
+            </div>
+          </div>
+          </>
+            )}
             <div className="bg-[#F3F4F4] p-4 max-w-[494px] mt-6 rounded-lg mb-6">
               <div className="flex justify-between">
                 <div>
@@ -99,6 +132,7 @@ const CommunityTargeting = (props) => {
                   />
 
                   <div className="py-4 border border-b-[1px] border-[#9e9f9fd9]/50 border-t-0 border-l-0 border-r-0">
+                    
                     <span className="text-[#12221A]/70 text-xs mb-4 inline-block">
                       Specific to User
                     </span>
@@ -211,6 +245,7 @@ const CommunityTargeting = (props) => {
                 </div>
               </div>
             </div>
+          
             <div className="grid grid-cols-2 gap-4 ">
               <div className="max-w-[526px] ">
                 <div className="flex ">

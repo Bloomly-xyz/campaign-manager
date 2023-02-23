@@ -43,14 +43,41 @@ transaction ( name: String, description: String, metaData: {String: String}, sta
 }`;
 
 const ClaimUtility = () => `\
-    `;
-const ClaimUtilityDemo = () => `\
+import UtilityTracker from ${process.env.REACT_APP_UTILITYTRACKER}
+import NonFungibleToken from  ${process.env.REACT_APP_NONFUNGIBLETOKEN}
+
+transaction(utilityId:UInt64, collectionPublicPath: PublicPath){
+
+    let nfts: [UInt64]
+    let userAddress: Address
+    let dAppResource: &UtilityTracker.Dapp
+
+    prepare(dapp:AuthAccount, user:AuthAccount){
+
+        self.userAddress = user.address
+
+        let collectionRef = user.getCapability(collectionPublicPath)
+                            .borrow<&{NonFungibleToken.CollectionPublic}>()
+                            ?? panic("Could not borrow capability from public collection at specified path")
+
+        self.nfts = collectionRef.getIDs()
+
+        self.dAppResource = dapp.borrow<& UtilityTracker.Dapp>(from: UtilityTracker.DappStoragePath)
+                            ?? panic("could not borrow Dapp resource")
+    }
+    pre{
+        self.nfts.length > 0 : "User does not own this nft"
+    }
+    execute {
+        self.dAppResource.claimUtility(utilityId: utilityId, address: self.userAddress)
+    }
+}
     `;
 const MintDemo = () => `\
     import TopShot from ${process.env.REACT_APP_TOPSHOT}
     import NonFungibleToken from ${process.env.REACT_APP_NONFUNGIBLETOKEN}
     import MetadataViews from ${process.env.REACT_APP_METADATAVIEWS}
-    
+
     // This transaction is what an admin would use to mint a single new moment
     // and deposit it in a user's collection
     // Parameters:
@@ -106,7 +133,6 @@ const MintDemo = () => `\
 const BlockChainScripts = {
     CreateUtility,
     ClaimUtility,
-    ClaimUtilityDemo,
     MintDemo
 }
 
