@@ -14,9 +14,9 @@ namespace CampaignManager.Infrastructure.Models.DBModels
         public int Id { get; set; }
         [Column(TypeName = "VARCHAR(100)")]
         public string? Uuid { get; set; }
-        [ForeignKey("Utilities")]
+        [ForeignKey("Campaigns")]
         public int? CampaignId { get; set; }
-        public virtual Utilities Utilities { get; set; }
+        public virtual Campaigns Campaigns { get; set; }
         [ForeignKey("Users")]
         public int? UserId { get; set; }
         public virtual Users Users { get; set; }
