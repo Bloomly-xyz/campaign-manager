@@ -80,7 +80,6 @@ const ClaimUtilityContent = () => {
                 let campaignUtilityObjectData = JSON.parse(
                   data?.campaignUtilityJson
                 );
-                console.log("abc")
                 setCampaignUtilitiesData([                  
                   campaignUtilityObjectData
                 ]);
