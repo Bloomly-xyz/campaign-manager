@@ -19,6 +19,7 @@ builder.Services.Configure<KestrelServerOptions>(options =>
 });
 var app = builder.Build();
 app.UseHttpLogging();
+app.UseRouting();
 app.UseCors(options => options
              .SetIsOriginAllowedToAllowWildcardSubdomains()
               .WithOrigins("http://localhost:5002",
