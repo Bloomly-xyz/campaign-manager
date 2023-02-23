@@ -54,12 +54,11 @@ const ClaimUtilityContent = () => {
     //eslint-disable-next-line
   }, [id]);
 
-  const checkEndDate = (endTime) => {
-    const StartTime = new Date();
-    const EndTime = new Date(endTime);
-    if (EndTime - StartTime <= 0) {
+  const checkEndDate = (endDate) => {
+    const currentMomentDate=moment()?.utc();
+    const endMomentDate=moment(endDate)?.utc();
+   if(moment(endMomentDate).isBefore(currentMomentDate))
       navigate("/oops");
-    }
   };
 
   const getCampaignData = () => {
@@ -69,7 +68,8 @@ const ClaimUtilityContent = () => {
       .then((response) => {
         dispatch(setLoader(false));
         if (response?.statusCode === 200) {
-          // checkEndDate(response?.payload?.campaignEndDate);
+          debugger;
+           checkEndDate(response?.payload?.campaignEndDate);
           setCampaignData(response?.payload);
           checkIfClaimedAlready(response?.payload?.id, response?.payload?.userId)
           if (response?.payload?.campaignUtilities?.length > 0) {
@@ -143,31 +143,32 @@ const ClaimUtilityContent = () => {
 
           <div className="mb-10">
             <button
-              className="btn-primary max-w-[238px]"
+              className={` ${claimedUtility && 'cursor-not-allowed border border-[#A5F33C] bg-[#000000] hover:bg-[#000000] text-white'} btn-primary  max-w-[238px]`}
               disabled={claimedUtility}
               onClick={handleClaimForm}
             >
+              {claimedUtility && <img className="inline mr-2" src={images.ClaimedCheckedIcon} alt='icon' />}
               {`${claimedUtility ? 'Claimed' : 'Claim Utilty'}`}
             </button>
           </div>
           <div className="mb-10 mr-8">
             <TabComponentClaim>
               <TabHeaderClaim>
-                {campaignData?.physical && (
+                {/* {campaignData?.physical && ( */}
                   <TabClaim openTab={openTab} setOpenTab={setOpenTab} value={1}>
                     Physical
                   </TabClaim>
-                )}
-                {campaignData?.digital && (
+                {/* )} */}
+                {/* {campaignData?.digital && ( */}
                   <TabClaim openTab={openTab} setOpenTab={setOpenTab} value={2}>
                     Digital
                   </TabClaim>
-                )}
-                {campaignData?.experencial && (
+                {/* )} */}
+                {/* {campaignData?.experencial && ( */}
                   <TabClaim openTab={openTab} setOpenTab={setOpenTab} value={3}>
                     Experiential
                   </TabClaim>
-                )}
+                {/* )} */}
               </TabHeaderClaim>
 
               {campaignUtilitiesData?.map((data, index) => (
@@ -208,8 +209,8 @@ const ClaimUtilityContent = () => {
             </TabComponentClaim>
           </div>
         </div>
-        <div className="text-center">
-          <img className="inline" src={campaignUtilitiesData?.[0]?.filePath} alt="icon" />
+        <div className="text-center max-w-[600px] max-h-[570px] p-10 overflow-hidden">
+          <img className="inline  max-h-[530px]" src={campaignUtilitiesData?.[0]?.filePath} alt="icon" />
         </div>
       </div>
       {openClaimModal && (
@@ -221,9 +222,6 @@ const ClaimUtilityContent = () => {
               setAlertMessageContent={setAlertMessageContent}
               setOpenClaimModal={setOpenClaimModal}
               setOpenAlertModal={setOpenAlertModal}
-              campaignUuid={id}
-              userId={adminInfo}
-              // blockChainTransactionId={"123456789"}
               campaignData={campaignData}
             />
           }

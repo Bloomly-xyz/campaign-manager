@@ -179,9 +179,13 @@ const CampaignCreation = () => {
       campaignObj.campaignJson = nftContractData?.campaignJson
     }
     else if (stepEnum === 3) {
-      debugger;
+      var now = moment();
       let startDate = moment().add(10, "minutes").toISOString();
-      let endDate = moment(formData?.expirydate).toISOString()
+      let endDate = moment(formData?.expirydate).set({
+        'hour': now.hour(),
+        'minute': now.minute(),
+        'second': now.second()
+      }).toISOString()
       setNFTContractData(prevState => ({
         ...prevState,
         campaignName: formData?.name,
@@ -200,11 +204,11 @@ const CampaignCreation = () => {
     else if (stepEnum === 4) {
 
       campaignObj.CampaignPublicUrl = `${window.location.origin}/claim-utility/${nftContractData?.campaignUuid}`;
-      const txId = await createCampaignOnBC(nftContractData);
-      campaignObj.blockChainTransactionId=txId;
-      let bc_Jsn=JSON.stringify({isDemo:nftContractData?.isDemoCollection ,utilityTx:txId,mintingTx:mintStatusRef.current})
-      campaignObj.blockChainJson=bc_Jsn;
-      campaignObj.isActive=txId ? true : false
+      const campaignResp = await createCampaignOnBC(nftContractData);
+      campaignObj.blockChainTransactionId = campaignResp?.txId;
+      let bc_Jsn = JSON.stringify({ isDemo: nftContractData?.isDemoCollection, utilityTx: campaignResp, mintingTx: mintStatusRef.current })
+      campaignObj.blockChainJson = bc_Jsn;
+      campaignObj.isActive = campaignResp?.txId ? true : false
       //in future we will give option for retry baced on txid null condition
     }
     campaignService.createCampaign(campaignObj).then((result) => {
@@ -234,10 +238,10 @@ const CampaignCreation = () => {
   }
   const createCampaignOnBC = async (campaignObj) => {
     campaignObj.startDateUnix = moment(campaignObj?.campaignStartDate).unix() + ".0"
-    campaignObj.endDateUnix = moment(campaignObj?.campaignStartDate).unix() + ".0"
+    campaignObj.endDateUnix = moment(campaignObj?.campaignEndDate).unix() + ".0"
     const createUtilityOnBC = await BlockChainTx?.createUtilityTx(campaignObj)
     if (!createUtilityOnBC?.error && createUtilityOnBC?.message) {
-      return createUtilityOnBC?.message?.txId;
+      return createUtilityOnBC?.message;
 
     }
     else {
