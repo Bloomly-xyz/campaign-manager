@@ -21,19 +21,12 @@ var app = builder.Build();
 app.UseHttpLogging();
 app.UseCors(options => options
              .SetIsOriginAllowedToAllowWildcardSubdomains()
-             .WithOrigins(
-                          "http://localhost:3000",
-                          "http://localhost:3001",
-                          "http://localhost:3002",
-                          "http://localhost:3003",
-                          "http://localhost:8080",
-                          "http://*.localhost:8080", 
-                          "http://*.localhost:3001",
-                          "http://*.localhost:3002",
-                          "https://*.bloomly.xyz",
-                          "https://campaignmanager.bloomly.xyz",
-                          "https://nexum.bloomly.xyz"
-                          )
+              .WithOrigins("http://localhost:5002",
+             "https://campaignmanager.bloomly.xyz",
+             "https://nexum.bloomly.xyz",
+             "http://localhost:3000",
+             "http://localhost:3001"
+             )
              .AllowAnyHeader()
              .AllowAnyMethod()
              .AllowCredentials()
