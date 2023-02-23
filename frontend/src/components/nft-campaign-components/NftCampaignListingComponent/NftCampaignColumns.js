@@ -46,7 +46,7 @@ export const COLUMNS = [
     Header: "Status",
     Footer: "Status",
     accessor: "isActive",
-    Cell: ({ row }) => <>{row?.values?.isActive ? "Active" : "Inactive"} {console.log("aaa",row?.values?.isActive)}</>,
+    Cell: ({ row }) => <>{row?.values?.isActive ? "Active" : "Inactive"}</>,
   },
   {
     Header: "Launch Date",

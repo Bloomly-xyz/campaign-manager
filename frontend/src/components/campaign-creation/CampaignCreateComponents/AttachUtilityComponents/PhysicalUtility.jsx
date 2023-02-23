@@ -12,7 +12,6 @@ const PhysicalUtility = (props) => {
   } = props;
 
   const handleUtilitySelection = (data) => {
-    console.log(data);
     setSelectedUtility(data);
   };
 
