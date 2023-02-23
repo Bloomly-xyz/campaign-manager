@@ -1,3 +1,4 @@
+import DateFormat from "../../../helpers/DateFormat";
 
 export const COLUMNS = [
     {
@@ -29,12 +30,13 @@ export const COLUMNS = [
     {
         Header: "Others",
         Footer: "Others",
-        accessor: "others",  
+        accessor: "other",  
     },
     {
         Header: "Claimed Date",
         Footer: "Claimed Date",
-        accessor: "claimedDate", 
+        accessor: "campaignClaimDate", 
+          Cell: ({ row }) => <>{row?.values?.campaignClaimDate ? DateFormat(row?.values?.campaignClaimDate) :'-'}</>,
     }
   
   ];

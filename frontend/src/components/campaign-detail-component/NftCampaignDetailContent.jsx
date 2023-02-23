@@ -21,7 +21,8 @@ const NftCampaignDetailContent = () => {
    const { id } = useParams();
    const location = useLocation();
    const campaignName  =location?.state || null ;
-    const [campaignDetailsData, setCampaignDetailsData] = useState([])
+    const [campaignDetailsData, setCampaignDetailsData] = useState([]);
+    const [campaignClaimJson,setCampaignClaimJson]=useState();
  
   // React table suggests to memoize the columns and data for avoiding the re creation of data on every render
   const columns = useMemo(() => COLUMNS, []);
@@ -44,8 +45,14 @@ const NftCampaignDetailContent = () => {
       dispatch(setLoader(false))
       if(response?.statusCode === 200){
         if(response?.payload?.length > 0){
-          const data = (response?.payload);
-          setCampaignDetailsData(data)
+          let data = (response?.payload);
+          let claimJson=data?.map((reslt,i)=>{
+            let parsedClaimJSON=JSON.parse(reslt?.campaignClaimJson)
+            return {...reslt,emailAddress:parsedClaimJSON?.emailAddress,name:parsedClaimJSON?.name,other:parsedClaimJSON?.other,phoneNumber:parsedClaimJSON?.phoneNumber,shippingAddress:parsedClaimJSON?.shippingAddress}
+          });
+          
+          console.log(claimJson)
+          setCampaignDetailsData(claimJson)
         }else{
           setCampaignDetailsData([])
         } 
