@@ -30,7 +30,7 @@ app.UseCors(options => options
                           "http://*.localhost:8080", 
                           "http://*.localhost:3001",
                           "http://*.localhost:3002",
-                          "http://*.bloomly.xyz"
+                          "https://*.bloomly.xyz"
                           )
              .AllowAnyHeader()
              .AllowAnyMethod()
