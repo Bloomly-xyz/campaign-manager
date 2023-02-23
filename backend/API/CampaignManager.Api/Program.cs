@@ -30,7 +30,9 @@ app.UseCors(options => options
                           "http://*.localhost:8080", 
                           "http://*.localhost:3001",
                           "http://*.localhost:3002",
-                          "https://*.bloomly.xyz"
+                          "https://*.bloomly.xyz",
+                          "https://campaignmanager.bloomly.xyz",
+                          "https://nexum.bloomly.xyz"
                           )
              .AllowAnyHeader()
              .AllowAnyMethod()
