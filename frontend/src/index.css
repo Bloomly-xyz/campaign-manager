@@ -1,13 +1,35 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-primary {
+      @apply inline-block w-full py-3  text-base font-bold leading-snug text-[#12221A] focus-visible:outline-0 active:outline-0 active:outline-offset-0 active:outline-transparent active:ring-offset-0 active:border-0  outline-0  focus-visible:ring-offset-0 capitalize transition duration-150 ease-in-out bg-[#A5F33C] rounded-full shadow-md px-7 hover:bg-[#96FF0A]/80 disabled:bg-[#96FF0A]/50 disabled:cursor-not-allowed hover:shadow-lg focus:bg-[#A5F33C]/90 focus:shadow-lg focus:outline-0 focus:ring-0 active:bg-[#96FF0A] active:shadow-lg;
+    }
+    .btn-secondary{
+      @apply inline-block w-full py-3  border border-[#12221A] text-base font-bold leading-snug text-[#12221A] focus-visible:outline-0 active:outline-0 active:outline-offset-0 active:outline-transparent active:ring-offset-0 active:border-0  outline-0  focus-visible:ring-offset-0 capitalize transition duration-150 ease-in-out bg-white rounded-full shadow-md px-7 hover:bg-[#F3F4F4] disabled:cursor-not-allowed hover:shadow-lg focus:bg-[#F3F4F4] focus:shadow-lg focus:outline-0 focus:ring-0 active:bg-[#F3F4F4] active:shadow-lg; 
+    }
+    .menu-selected-before {
+      @apply  before:top-0 before:left-0 before:absolute before:h-full before:w-1 before:bg-[#A5F33C] before:rounded-r
+    }
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Toastify__progress-bar--warning  {
+  background: yellow !important;
+}
+
+.Toastify__progress-bar-error {
+  background: red !important;
+}
+
+.Toastify__toast--error {
+  color: white !important;
+}
+.Toastify__progress-bar--success {
+  background: #A5F33C !important;
+  
+}
+.Toastify__toast-body {
+  overflow: hidden;
 }
