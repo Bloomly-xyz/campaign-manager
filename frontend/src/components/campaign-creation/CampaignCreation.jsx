@@ -399,6 +399,7 @@ const CampaignCreation = () => {
             <MintNftModal
               setOpenModal={setOpenNftMintModal}
               mintCollectionHandler={mintCollectionHandler}
+              nextBtnClickHandler={nextBtnClickHandler}
             />
           }
           modal_Id="claim-utility-modal"

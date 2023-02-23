@@ -44,7 +44,7 @@ const PhysicalUtility = (props) => {
                 <button className="mr-6 btn-secondary " onClick={handleBack}>
                   Back
                 </button>
-                <button className=" btn-primary" onClick={handleUtilityForm}>
+                <button className=" btn-primary" onClick={handleUtilityForm} disabled={!selectedUtility?.value}>
                   Continue
                 </button>
               </div>

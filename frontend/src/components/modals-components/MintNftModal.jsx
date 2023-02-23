@@ -2,9 +2,10 @@ import React from 'react'
 import CloseViewIcon from '../common/ui-components/CloseViewIcon'
 
 const MintNftModal = (props) => {
-    const {setOpenModal,mintCollectionHandler} = props;
+    const {setOpenModal,mintCollectionHandler,nextBtnClickHandler} = props;
     const handleCloseModal = () => {
-        setOpenModal(false)
+        setOpenModal(false);
+        nextBtnClickHandler(1);
     }
   return (
     <>
