@@ -46,6 +46,7 @@ const ClaimUtilityContent = () => {
   };
   const handleClose = () => {
     setOpenAlertModal(false);
+    getCampaignData();
   };
 
   useEffect(() => {
@@ -107,6 +108,7 @@ const ClaimUtilityContent = () => {
         setClaimedUtility(!resp?.payload)
       }
     }).catch((errpr) => {
+      setClaimedUtility(true)
       dispatch(setLoader(false));
     })
   }
@@ -142,7 +144,7 @@ const ClaimUtilityContent = () => {
 
           <div className="mb-10">
             <button
-              className={` ${claimedUtility && 'cursor-not-allowed border border-[#A5F33C] bg-[#000000] hover:bg-[#000000] text-white'} btn-primary  max-w-[238px]`}
+              className={` ${claimedUtility && 'cursor-not-allowed border border-[#A5F33C] bg-[#000000] hover:bg-[#000000] text-white disabled:bg-black  hover:bg-black focus:bg-black active:bg-black'} btn-primary  max-w-[238px] `}
               disabled={claimedUtility}
               onClick={handleClaimForm}
             >

@@ -42,7 +42,8 @@ import ClaimedCheckedIcon from '../../assets/images/Circle-checked-icon.svg';
 import NexusLogo from '../../assets/images/nexum-logo.svg';
 import CapIcon from '../../assets/images/Captopshot.png';
 import NexusWhiteLogo from '../../assets/images/nexus-white-logo.svg';
-import NexusSidebarIcon from '../../assets/images/nexus-sidebar-icon.svg'
+import NexusSidebarIcon from '../../assets/images/nexus-sidebar-icon.svg';
+import MerchIconWhite from "../../assets/images/merch-icon-white.svg";
 
 const images = {
   LoginBg,
@@ -89,6 +90,7 @@ const images = {
   NexusLogo,
   CapIcon,
   NexusWhiteLogo,
-  NexusSidebarIcon
+  NexusSidebarIcon,
+  MerchIconWhite
 };
 export default images;
