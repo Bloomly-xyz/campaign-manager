@@ -13,7 +13,7 @@ import BlockChainErrorsHandler from "../../helpers/BlockChainErrorsHandler";
 
 const ClaimUtilityModal = (props) => {
   const dispatch = useDispatch();
-  const { setOpenClaimModal, setOpenAlertModal, setAlertMessageContent ,campaignUuid ,userId,campaignData } =
+  const { setOpenClaimModal, setOpenAlertModal, setAlertMessageContent ,campaignData } =
     props;
     //console.log(JSON?.parse(campaignData?.blockChainJson))
   const {
@@ -38,7 +38,7 @@ const ClaimUtilityModal = (props) => {
     }
     const claimResp=await BlockChainTx?.claimUtilityTx(claimObj);
     if(!claimResp?.error){
-    ClaimUtilityService.CreateClaimUtility(values ,campaignUuid ,userId?.id ,claimResp?.message?.txId)
+    ClaimUtilityService.CreateClaimUtility(values ,campaignData?.id ,campaignData?.userId ,claimResp?.message?.txId)
     .then(response => {
       dispatch(setLoader(false))
       if(response?.statusCode === 200){

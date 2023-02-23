@@ -222,9 +222,6 @@ const ClaimUtilityContent = () => {
               setAlertMessageContent={setAlertMessageContent}
               setOpenClaimModal={setOpenClaimModal}
               setOpenAlertModal={setOpenAlertModal}
-              campaignUuid={id}
-              userId={adminInfo}
-              // blockChainTransactionId={"123456789"}
               campaignData={campaignData}
             />
           }
