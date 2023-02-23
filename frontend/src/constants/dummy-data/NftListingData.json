@@ -1,0 +1,230 @@
+[ 
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ],
+        "claimedamount":"$3200",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ],
+        "claimedamount":"$1,500",
+        "status":"Inactive",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ],
+        "claimedamount":"$3200",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ],
+        "claimedamount":"$1,500",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital","Experiential" ],
+        "claimedamount":"$3200",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital" ],
+        "claimedamount":"$1,500",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital" ],
+        "claimedamount":"$3200",
+        "status":"Inactive",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical"  ],
+        "claimedamount":"$3200",
+        "status":"Inactive",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical"  ],
+        "claimedamount":"$3200",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical"  ],
+        "claimedamount":"$1,500",
+        "status":"Inactive",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical"  ],
+        "claimedamount":"$3200",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital","Experiential" ],
+        "claimedamount":"$1,500",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital","Experiential" ],
+        "claimedamount":"$3200",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital" ],
+        "claimedamount":"$1,500",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital" ],
+        "claimedamount":"$3200",
+        "status":"Inactive",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital" ],
+        "claimedamount":"$3200",
+        "status":"Inactive",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital" ],
+        "claimedamount":"$3200",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ],
+        "claimedamount":"$1,500",
+        "status":"Inactive",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ],
+        "claimedamount":"$3200",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical","Digital" ],
+        "claimedamount":"$1,500",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital","Experiential" ],
+        "claimedamount":"$3200",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical","Digital" ],
+        "claimedamount":"$1,500",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital" ],
+        "claimedamount":"$3200",
+        "status":"Inactive",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital"],
+        "claimedamount":"$3200",
+        "status":"Inactive",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical"  ],
+        "claimedamount":"$3200",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical"  ],
+        "claimedamount":"$1,500",
+        "status":"Inactive",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital" ],
+        "claimedamount":"$3200",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital" ],
+        "claimedamount":"$1,500",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital","Experiential" ],
+        "claimedamount":"$3200",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital" ],
+        "claimedamount":"$1,500",
+        "status":"Active",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital"],
+        "claimedamount":"$3200",
+        "status":"Inactive",
+        "launchdate":"Dec 18, 2022"
+    },
+    {
+        "campaignname":"Bloomly Campaign",
+        "utilities":["Physical" ,"Digital"],
+        "claimedamount":"$3200",
+        "status":"Inactive",
+        "launchdate":"Dec 18, 2022"
+    }
+
+
+  
+ 
+]
