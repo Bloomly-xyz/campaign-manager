@@ -1,3 +1,4 @@
+import moment from "moment";
 import React from "react";
 
 import KeyValueView from "../../common/ui-components/KeyValueView";
@@ -97,9 +98,7 @@ const Confirmation = (props) => {
                   title={"Expiry Date"}
                   value={
                     PhysicalUtilityData?.expirydate
-                      ? new Date(PhysicalUtilityData?.expirydate)
-                          .toLocaleDateString()
-                          .slice(0, 10)
+                      ? moment(PhysicalUtilityData?.expirydate).format("MMMM D, YYYY")
                       : "-"
                   }
                 />

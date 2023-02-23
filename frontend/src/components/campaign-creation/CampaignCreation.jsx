@@ -333,6 +333,7 @@ const CampaignCreation = () => {
           handleChangeCollection={handleChangeCollection}
           nextBtnClickHandler={nextBtnClickHandler}
           setNFTContractData={setNFTContractData}
+          isDemo={nftContractData?.isDemoCollection}
         />
       )}
       {activeStep === 3 && (
@@ -349,6 +350,7 @@ const CampaignCreation = () => {
               setFile={setFile}
               file={file}
               nextBtnClickHandler={nextBtnClickHandler}
+              dispatch={dispatch}
             />
           ) : (
             <AttachUtility

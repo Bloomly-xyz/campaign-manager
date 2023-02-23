@@ -8,6 +8,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { PhysicalUtilitySchema } from './../../../../utils/validationSchema/PhysicalUtilitySchema';
 import fileUploaderS3BucketService from "../../../../services/fileuploaderS3.service";
+import { setLoader } from "../../../../redux/slices/loading/loaderSlice";
 
 
 const PhysicalUtilityForm = (props) => {
@@ -21,13 +22,15 @@ const PhysicalUtilityForm = (props) => {
     campaignCreationData,
     setFile,
     file,
-    nextBtnClickHandler
+    nextBtnClickHandler,
+    set,
+    dispatch
   } = props;
   const { PhysicalUtilityData } = campaignCreationData?.AttachUtility || {};
 
   const fileInputRef = useRef();
 
-  const [filePath, setFilePath] = useState("");
+  const filePathRef = useRef("");
 
   const {
     register,
@@ -121,24 +124,26 @@ const PhysicalUtilityForm = (props) => {
     } else {
       // setFileSize((e.target.files[0]?.size / 1024).toFixed(2));
       setFile(URL.createObjectURL(e.target.files[0]));
-      const formData = new FormData();
-      formData.append("File", e.target.files[0])
-      fileUploaderS3BucketService.uploadImage(formData).then((response) => {
-        if (response?.payload?.result) {
-          setFilePath(response?.payload?.result)
-        }
-      }).catch((error) => {
-
-      })
+      filePathRef.current=e.target.files[0];
     }
   };
 
   const handleUtilityData = (values) => {
+    dispatch(setLoader(true));
     let formData = values;
+    const fileForm = new FormData();
+    fileForm.append("File", filePathRef.current)
+    fileUploaderS3BucketService.uploadImage(fileForm).then((response) => {
+      if (response?.payload) {
+        formData.filePath = response?.payload;
+        setCampaignCreationData({ ...campaignCreationData, AttachUtility: { PhysicalUtilityData: formData } });
+        nextBtnClickHandler(3, values);
+      }
+    }).catch((error) => {
+      dispatch(setLoader(false));
 
-    formData.filePath = filePath;
-    setCampaignCreationData({ ...campaignCreationData, AttachUtility: { PhysicalUtilityData: formData } });
-    nextBtnClickHandler(3, values);
+    })
+   
   };
   return (
     <>

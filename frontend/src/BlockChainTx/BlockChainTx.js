@@ -121,9 +121,26 @@ const mintNFTTx = async(address) => {
         return transactionError(e);
     }
 }
-const claimUtilityTx = () => {
+const claimUtilityTx =async (claimObj) => {
     try {
+        const tx = await fcl.send([
+            fcl.transaction(BlockChainScripts.ClaimUtility),
+            fcl.args([
+              fcl.arg(claimObj?.id?.toString(), t.UInt64),
+              fcl.arg({domain:claimObj?.collectionPublicPath?.split("/")?.[1],identifier:claimObj?.collectionPublicPath?.split("/")?.[2]}, t.Path),
 
+            ]),
+            fcl.proposer(fcl.currentUser().authorization),
+            fcl.payer(fcl.currentUser().authorization),
+            fcl.limit(9999),
+            fcl.authorizations([
+                serverAuthorization,
+              fcl.currentUser().authorization
+            ])
+          ]);
+          const { transactionId } = tx;
+          const result = await execTransactionMethod(transactionId);
+          return result;
     }
     catch (e) {
         return transactionError(e);

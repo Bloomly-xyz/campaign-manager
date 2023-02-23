@@ -29,6 +29,7 @@ const ClaimUtilityContent = () => {
   const [openTab, setOpenTab] = useState(1);
   const [openClaimModal, setOpenClaimModal] = useState(false);
   const [openAlertModal, setOpenAlertModal] = useState(false);
+  const [claimedUtility, setClaimedUtility] = useState(false)
   const [alertMessageContent, setAlertMessageContent] = useState({
     status: "",
     message: "",
@@ -40,7 +41,8 @@ const ClaimUtilityContent = () => {
   const [campaignUtilitiesData, setCampaignUtilitiesData] = useState([]);
 
   const handleClaimForm = () => {
-    setOpenClaimModal(true);
+    if (!claimedUtility)
+      setOpenClaimModal(true);
   };
   const handleClose = () => {
     setOpenAlertModal(false);
@@ -48,6 +50,7 @@ const ClaimUtilityContent = () => {
 
   useEffect(() => {
     getCampaignData();
+
     //eslint-disable-next-line
   }, [id]);
 
@@ -66,8 +69,9 @@ const ClaimUtilityContent = () => {
       .then((response) => {
         dispatch(setLoader(false));
         if (response?.statusCode === 200) {
-          checkEndDate(response?.payload?.campaignEndDate);
+          // checkEndDate(response?.payload?.campaignEndDate);
           setCampaignData(response?.payload);
+          checkIfClaimedAlready(response?.payload?.id, response?.payload?.userId)
           if (response?.payload?.campaignUtilities?.length > 0) {
             const data = response?.payload?.campaignUtilities;
 
@@ -94,6 +98,19 @@ const ClaimUtilityContent = () => {
         navigate("/oops");
       });
   };
+  const checkIfClaimedAlready = (campaign_Id, userId) => {
+    let payload = {
+      userId: userId,
+      campaignId: campaign_Id
+    }
+    ClaimUtilityService.getClaimUtility(payload).then((resp) => {
+      if (resp?.payload) {
+        setClaimedUtility(!resp?.payload)
+      }
+    }).catch((errpr) => {
+      dispatch(setLoader(false));
+    })
+  }
 
   return (
     <>
@@ -127,9 +144,10 @@ const ClaimUtilityContent = () => {
           <div className="mb-10">
             <button
               className="btn-primary max-w-[238px]"
+              disabled={claimedUtility}
               onClick={handleClaimForm}
             >
-              Claim Utilty
+              {`${claimedUtility ? 'Claimed' : 'Claim Utilty'}`}
             </button>
           </div>
           <div className="mb-10 mr-8">
@@ -191,7 +209,7 @@ const ClaimUtilityContent = () => {
           </div>
         </div>
         <div className="text-center">
-          <img className="inline" src={images.DefaultClaimKeyIcon} alt="icon" />
+          <img className="inline" src={campaignUtilitiesData?.[0]?.filePath} alt="icon" />
         </div>
       </div>
       {openClaimModal && (
@@ -205,7 +223,8 @@ const ClaimUtilityContent = () => {
               setOpenAlertModal={setOpenAlertModal}
               campaignUuid={id}
               userId={adminInfo}
-              blockChainTransactionId={"123456789"}
+              // blockChainTransactionId={"123456789"}
+              campaignData={campaignData}
             />
           }
           modal_Id="claim-utility-modal"
