@@ -42,7 +42,7 @@ const CommunityTargeting = (props) => {
               Define who in the community is eligible to claim your utility.
             </p>
             {/** select collection section */}
-            <div className="flex justify-between mb-10">
+            <div className={`flex justify-between ${selectCollection===1 ? 'mb-10' : ""}`}>
               <CustomCheckbox
                 isChecked={selectCollection}
                 value={1}
@@ -92,7 +92,7 @@ const CommunityTargeting = (props) => {
           <>
             {isDemo && (
               <>
-              <div className="bg-[#F3F4F4] p-4 max-w-[494px] mt-6 rounded-lg mb-10">
+              <div className="bg-[#F3F4F4] p-4 max-w-[494px] mt-6 rounded-lg mb-6">
               <div className="flex justify-between">
                 <div>
                   <AttachUtilitySquareCheckbox
@@ -106,7 +106,7 @@ const CommunityTargeting = (props) => {
                 </div>
               </div>
             </div>
-            <div className="bg-[#F3F4F4] p-4 max-w-[494px] mt-6 rounded-lg mb-10">
+            <div className="bg-[#F3F4F4] p-4 max-w-[494px] mt-6 rounded-lg mb-6">
             <div className="flex justify-between">
               <div>
                 <AttachUtilitySquareCheckbox

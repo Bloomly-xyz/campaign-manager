@@ -9,12 +9,13 @@ import { useDispatch } from 'react-redux';
 import { setLoader } from "../../redux/slices/loading/loaderSlice";
 import Toast from "../../helpers/toast-component/Toast";
 import BlockChainTx from "../../BlockChainTx/BlockChainTx";
+import BlockChainErrorsHandler from "../../helpers/BlockChainErrorsHandler";
 
 const ClaimUtilityModal = (props) => {
   const dispatch = useDispatch();
   const { setOpenClaimModal, setOpenAlertModal, setAlertMessageContent ,campaignUuid ,userId,campaignData } =
     props;
-    
+    //console.log(JSON?.parse(campaignData?.blockChainJson))
   const {
     register,
     handleSubmit,
@@ -30,7 +31,12 @@ const ClaimUtilityModal = (props) => {
   };
   const handleClaimUtility =async (values) => {
     dispatch(setLoader(true));
-    const claimResp=await BlockChainTx?.claimUtilityTx(campaignData);
+    let parsedClaimObj=JSON?.parse(campaignData?.blockChainJson);
+    let claimObj={
+      id:parsedClaimObj?.utilityTx?.data?.utilityId,
+      collectionPublicPath:campaignData?.collectionPublicPath
+    }
+    const claimResp=await BlockChainTx?.claimUtilityTx(claimObj);
     if(!claimResp?.error){
     ClaimUtilityService.CreateClaimUtility(values ,campaignUuid ,userId?.id ,claimResp?.message?.txId)
     .then(response => {
@@ -56,7 +62,13 @@ const ClaimUtilityModal = (props) => {
   else{
     dispatch(setLoader(false));
     setOpenClaimModal(false);
-      Toast('Error while claiming.Please contact support.',"error")
+    let defaultErrMsg =
+            "Error while claiming utility";
+          let errDescription = BlockChainErrorsHandler(
+            claimResp?.message,
+            defaultErrMsg
+          );
+      Toast(errDescription,"error")
   }
 
     

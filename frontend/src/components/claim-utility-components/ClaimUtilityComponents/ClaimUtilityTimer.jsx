@@ -1,12 +1,14 @@
 import React from "react";
 import Countdown, { zeroPad } from "react-countdown";
+import { useNavigate } from "react-router-dom";
 
 const ClaimUtilityTimer = (props) => {
+  const navigate = useNavigate();
   const {timeInMilliSeconds} = props;
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
         // Render a completed state
-        return "";
+        navigate("/oops");
     } else {
         // Render a countdown
         return (

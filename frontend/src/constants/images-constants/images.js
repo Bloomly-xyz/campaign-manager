@@ -38,7 +38,7 @@ import TwitterIcon from '../../assets/images/twitter-icon.svg';
 import LinkInIcon from '../../assets/images/linkin-icon.svg';
 import DiscordIcon from '../../assets/images/discord-icon.svg';
 import CopyIcon from '../../assets/images/copyIcon.svg'
-
+import ClaimedCheckedIcon from '../../assets/images/Circle-checked-icon.svg';
 const images = {
   LoginBg,
   AuthLogo,
@@ -79,6 +79,7 @@ const images = {
   TwitterIcon,
   LinkInIcon,
   DiscordIcon,
-  CopyIcon
+  CopyIcon,
+  ClaimedCheckedIcon
 };
 export default images;
