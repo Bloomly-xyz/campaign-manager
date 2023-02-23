@@ -38,5 +38,9 @@ namespace CampaignManager.Infrastructure.Models.DBModels
         public string? CampaignJson { get; set; }
         [Column(TypeName = "VARCHAR(300)")]
         public string? CampaignPublicUrl { get; set; }
+        [Column(TypeName = "nVARCHAR(4000)")]
+        public string? BlockChainJson { get; set; }
+        [Column(TypeName = "VARCHAR(300)")]
+        public string? BlockChainTransactionId { get; set; }
     }
 }

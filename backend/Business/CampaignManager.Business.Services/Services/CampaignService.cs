@@ -76,7 +76,9 @@ namespace CampaignManager.Business.Services.Services
                 CollectionPublicPath = campaignResponse.CollectionPublicPath,
                 CampaignJson = campaignResponse.CampaignJson,
                 UserId = campaignResponse.UserId,
-                CampaignPublicUrl = campaignResponse.CampaignPublicUrl
+                CampaignPublicUrl = campaignResponse.CampaignPublicUrl,
+                BlockChainJson = campaignResponse.BlockChainJson,
+                BlockChainTransactionId = campaignResponse.BlockChainTransactionId
             };
             campaignResponseModel.CampaignUtilities = campaignUtilities.Where(x => x.CampaignId == campaignResponse.Id).Select(c => new CampainUtilitiesRequest
             {
@@ -111,9 +113,11 @@ namespace CampaignManager.Business.Services.Services
                     break;
 
                 case CampaignStepsEnum.Confirmation:
-                    campaign.IsActive = true;
+                    campaign.IsActive = campaignRequestModel.IsActive;
                     campaign.ModifiedDate = DateTime.UtcNow;
                     campaign.CampaignPublicUrl = campaignRequestModel.CampaignPublicUrl;
+                    campaign.BlockChainJson = campaignRequestModel.BlockChainJson;
+                    campaign.BlockChainTransactionId = campaignRequestModel.BlockChainTransactionId;
                     break;
 
                 default:
