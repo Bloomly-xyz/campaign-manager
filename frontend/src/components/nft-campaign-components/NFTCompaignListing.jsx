@@ -135,7 +135,9 @@ const NFTCompaignListing = () => {
     setActiveTab(option);
     setGlobalFilter("");
     if (option === "all") return;
-    setGlobalFilter(option);
+    if(option ==='physical')
+    setGlobalFilter("");
+    // setGlobalFilter(option);
   };
 
   const handleCreateCampaign = () => {

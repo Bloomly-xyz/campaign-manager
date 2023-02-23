@@ -24,7 +24,7 @@ const AttachUtilityCheckbox = (props) => {
           </div>
 
           <div className="text-center">
-            <img className="inline" src={data.image} alt="icon" />
+            <img className="inline" src={(selectedUtility?.value === 2  && data.title === 'Merch') ? images.MerchIconWhite  : data.image} alt="icon" />
             <h4 className={` ${ selectedUtility?.value === data.value ? 'text-white':'text-[#12221A]'  } text-base font-extrabold mb-1`}>
               {data.title}
             </h4>
