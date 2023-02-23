@@ -19,6 +19,7 @@ builder.Services.Configure<KestrelServerOptions>(options =>
 });
 var app = builder.Build();
 app.UseHttpLogging();
+app.UseRouting();
 app.UseCors(options => options
              .SetIsOriginAllowedToAllowWildcardSubdomains()
              .WithOrigins(
@@ -32,7 +33,10 @@ app.UseCors(options => options
                           "http://*.localhost:3002",
                           "https://*.bloomly.xyz",
                           "https://campaignmanager.bloomly.xyz",
-                          "https://nexum.bloomly.xyz"
+                          "https://nexum.bloomly.xyz/login",
+                          "https://www.nexum.bloomly.xyz/login",
+                          "https://*.bloomly.xyz/login",
+                          "http://*.bloomly.xyz"
                           )
              .AllowAnyHeader()
              .AllowAnyMethod()
