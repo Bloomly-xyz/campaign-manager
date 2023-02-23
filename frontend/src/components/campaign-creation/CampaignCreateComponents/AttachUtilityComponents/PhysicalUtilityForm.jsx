@@ -24,7 +24,8 @@ const PhysicalUtilityForm = (props) => {
     file,
     nextBtnClickHandler,
     set,
-    dispatch
+    dispatch,
+    cancelBtnClickHandler
   } = props;
   const { PhysicalUtilityData } = campaignCreationData?.AttachUtility || {};
 
@@ -334,6 +335,7 @@ const PhysicalUtilityForm = (props) => {
               </div>
             </div>
             <div>
+              <h2 className="text-[#12221A] text-2xl font-extrabold mb-1">Upload Image</h2>
               {/* File Uploader */}
               <label
                 htmlFor="inputFileSelector"
@@ -388,7 +390,7 @@ const PhysicalUtilityForm = (props) => {
               </div>
             </div>
             <div className="flex justify-end">
-              <button className="text-[#12221A] text-base font-semibold">
+              <button className="text-[#12221A] text-base font-semibold" onClick={cancelBtnClickHandler}>
                 Cancel
               </button>
             </div>

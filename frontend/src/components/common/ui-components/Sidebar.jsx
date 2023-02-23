@@ -19,7 +19,7 @@ const Sidebar = () => {
     
       <div className="flex flex-col fixed top-0 left-0   h-full min-h-screen  w-60 bg-[#12221A] pr-6 pt-10 rounded-r-2xl bg-[url('/src/assets/images/sidebar-after-icon.svg')] bg-no-repeat bg-contain bg-bottom">
         <div className="mb-10 text-center">
-         <Link to="/nft-campaigns"> <img className="inline-block" src={images.DashboardLogo} alt="logo" /></Link>
+         <Link to="/nft-campaigns"> <img className="inline-block" src={images.NexusSidebarIcon} alt="logo" /></Link>
         </div>
         <nav className="relative flex flex-col grow">
           <ul className="grow">

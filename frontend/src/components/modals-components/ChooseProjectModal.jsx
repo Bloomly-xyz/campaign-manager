@@ -30,7 +30,7 @@ const ChooseProjectModal = (props) => {
             Use your collection and add utility to the NFTs.
           </p>
         </div>
-        <div className={`p-6 bg-white text-[#12221A] border border-[#12221A]/25 rounded-xl mb-8 cursor-pointer`}>
+        <div className={`p-6 bg-white text-[#12221A] border border-[#12221A]/25 rounded-xl mb-8 cursor-not-allowed`}>
           <h4 className="text-base font-extrabold ">
           Create your own collection{" "}
           </h4>

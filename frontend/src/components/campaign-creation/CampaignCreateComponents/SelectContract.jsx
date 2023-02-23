@@ -6,7 +6,7 @@ import CustomCheckbox from "../../common/ui-components/form-ui/CustomCheckbox";
 const SelectContract = (props) => {
   const { selectContract, handleChangeContract, setSteps, steps, setActiveStep, contractListing,
     NFTAddressSearchHandler, showErr, setShowErr, setNFTContractData, nftContractData, inputPathHandler,
-    nextBtnClickHandler,setOpenNftMintModal } = props;
+    nextBtnClickHandler,setOpenNftMintModal,cancelBtnClickHandler } = props;
   const handleBack = () => {
     setActiveStep(1)
   }
@@ -203,7 +203,7 @@ const SelectContract = (props) => {
         </div>
         <div className="flex justify-between">
           <button className="btn-primary max-w-[526px]" onClick={() =>nftContractData?.isDemoCollection ? setOpenNftMintModal(true): nextBtnClickHandler(1)} disabled={contractListing?.length === 0 || !nftContractData?.contractAddress || !nftContractData?.contractStoragePath || !nftContractData?.collectionPublicPath}>Next</button>
-          <button className="text-[#12221A] text-base font-semibold" onClick={handleBack} >
+          <button className="text-[#12221A] text-base font-semibold" onClick={cancelBtnClickHandler} >
             Cancel
           </button>
         </div>

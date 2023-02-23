@@ -44,7 +44,7 @@ const NftCampaignDetailContent = () => {
       dispatch(setLoader(false))
       if(response?.statusCode === 200){
         if(response?.payload?.length > 0){
-          const data = JSON.parse(response?.payload);
+          const data = (response?.payload);
           setCampaignDetailsData(data)
         }else{
           setCampaignDetailsData([])

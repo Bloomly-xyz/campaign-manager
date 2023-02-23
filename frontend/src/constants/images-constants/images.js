@@ -37,8 +37,13 @@ import CloseIconSm from '../../assets/images/close-icon-sm.svg';
 import TwitterIcon from '../../assets/images/twitter-icon.svg';
 import LinkInIcon from '../../assets/images/linkin-icon.svg';
 import DiscordIcon from '../../assets/images/discord-icon.svg';
-import CopyIcon from '../../assets/images/copyIcon.svg'
+import CopyIcon from '../../assets/images/copyIcon.svg';
 import ClaimedCheckedIcon from '../../assets/images/Circle-checked-icon.svg';
+import NexusLogo from '../../assets/images/nexum-logo.svg';
+import CapIcon from '../../assets/images/Captopshot.png';
+import NexusWhiteLogo from '../../assets/images/nexus-white-logo.svg';
+import NexusSidebarIcon from '../../assets/images/nexus-sidebar-icon.svg'
+
 const images = {
   LoginBg,
   AuthLogo,
@@ -80,6 +85,10 @@ const images = {
   LinkInIcon,
   DiscordIcon,
   CopyIcon,
-  ClaimedCheckedIcon
+  ClaimedCheckedIcon,
+  NexusLogo,
+  CapIcon,
+  NexusWhiteLogo,
+  NexusSidebarIcon
 };
 export default images;

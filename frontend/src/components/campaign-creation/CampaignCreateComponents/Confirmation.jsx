@@ -4,7 +4,7 @@ import React from "react";
 import KeyValueView from "../../common/ui-components/KeyValueView";
 
 const Confirmation = (props) => {
-  const { campaignCreationData ,setOpenUtilityForm, setActiveStep ,file,nftContractData,nextBtnClickHandler  } = props;
+  const { campaignCreationData ,setOpenUtilityForm, setActiveStep ,file,nftContractData,nextBtnClickHandler ,cancelBtnClickHandler } = props;
   const { PhysicalUtilityData } = campaignCreationData?.AttachUtility || {};
 
 
@@ -136,7 +136,7 @@ const Confirmation = (props) => {
               </div>
             </div>
             <div className="flex justify-end">
-              <button className="text-[#12221A] text-base font-semibold">
+              <button className="text-[#12221A] text-base font-semibold" onClick={cancelBtnClickHandler}>
                 Cancel
               </button>
             </div>

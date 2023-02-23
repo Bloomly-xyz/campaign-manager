@@ -66,7 +66,7 @@ const createUtilityTx =async (utilityObj) => {
             
               fcl.arg([{key:"",value:""}],
                 t.Dictionary({ key: t.String, value: t.String })),
-                fcl.arg(utilityObj?.startDateUnix,t.UFix64),
+                fcl.arg(null,t.Optional(t.UFix64)),
                 fcl.arg(utilityObj?.endDateUnix,t.UFix64),
 
                 fcl.arg(utilityObj?.contractName, t.String),

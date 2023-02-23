@@ -5,7 +5,7 @@ const ClaimUtilityHeader = () => {
   return (
     <>
     <div className='p-5 text-center'>
-        <img className='inline' src={images.ClaimUtilityHeader} alt='logo' />
+        <img className='inline' src={images.NexusWhiteLogo} alt='logo' />
     </div>
     </>
   )

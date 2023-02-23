@@ -61,9 +61,9 @@ const BloctoAuth = () => {
   return (
     <>
       <div className="flex justify-center h-full">
-        <div className="bg-[url('/src/assets/images/auth-right-bg.svg')] bg-no-repeat bg-cover bg-center rounded-3xl  py-10 px-14 max-w-[532px] 3xl:max-w-[80%] flex  items-center flex-col">
-          <div className="grow">
-            <img src={images.AuthLogo} alt="logo" />
+        <div className="bg-[url('/src/assets/images/auth-right-bg.svg')] bg-no-repeat bg-cover bg-center rounded-3xl pt-24 pb-10 px-14 max-w-[532px] 3xl:max-w-[80%] flex  items-center flex-col">
+          <div className="mb-3 grow">
+            <img src={images.NexusLogo} alt="logo" />
           </div>
           <div>
             <div className="mb-8 text-center ">

@@ -281,6 +281,9 @@ const CampaignCreation = () => {
       }));
     }
   }
+  const cancelBtnClickHandler=()=>{
+    navigate("/nft-campaigns")
+  }
   /** Event Handlers End*/
 
 
@@ -328,6 +331,7 @@ const CampaignCreation = () => {
           inputPathHandler={inputPathHandler}
           nextBtnClickHandler={nextBtnClickHandler}
           setOpenNftMintModal={setOpenNftMintModal}
+          cancelBtnClickHandler={cancelBtnClickHandler}
         />
       )}
       {activeStep === 2 && (
@@ -340,6 +344,7 @@ const CampaignCreation = () => {
           nextBtnClickHandler={nextBtnClickHandler}
           setNFTContractData={setNFTContractData}
           isDemo={nftContractData?.isDemoCollection}
+          cancelBtnClickHandler={cancelBtnClickHandler}
         />
       )}
       {activeStep === 3 && (
@@ -357,6 +362,7 @@ const CampaignCreation = () => {
               file={file}
               nextBtnClickHandler={nextBtnClickHandler}
               dispatch={dispatch}
+              cancelBtnClickHandler={cancelBtnClickHandler}
             />
           ) : (
             <AttachUtility
@@ -367,11 +373,12 @@ const CampaignCreation = () => {
               utilitiesListing={utilitiesListing}
               setUtilitiesListing={setUtilitiesListing}
               filterData={filterData}
+              cancelBtnClickHandler={cancelBtnClickHandler}
             />
           )}
         </>
       )}
-      {activeStep === 4 && <Confirmation file={file} setOpenUtilityForm={setOpenUtilityForm} setActiveStep={setActiveStep} campaignCreationData={campaignCreationData} nftContractData={nftContractData} nextBtnClickHandler={nextBtnClickHandler} />}
+      {activeStep === 4 && <Confirmation cancelBtnClickHandler={cancelBtnClickHandler} file={file} setOpenUtilityForm={setOpenUtilityForm} setActiveStep={setActiveStep} campaignCreationData={campaignCreationData} nftContractData={nftContractData} nextBtnClickHandler={nextBtnClickHandler} />}
       {openAlertModal && <Modal
         openModal={openAlertModal}
         closeModal={setOpenAlertModal}

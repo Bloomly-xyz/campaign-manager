@@ -8,6 +8,7 @@ const PhysicalUtility = (props) => {
     setOpenUtilityForm,
     setActiveStep,
     data,
+    cancelBtnClickHandler
   } = props;
 
   const handleUtilitySelection = (data) => {
@@ -50,7 +51,7 @@ const PhysicalUtility = (props) => {
               </div>
             </div>
             <div className="flex justify-end">
-              <button className="text-[#12221A] text-base font-semibold">
+              <button className="text-[#12221A] text-base font-semibold" onClick={cancelBtnClickHandler}>
                 Cancel
               </button>
             </div>

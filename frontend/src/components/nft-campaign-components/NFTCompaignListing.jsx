@@ -41,7 +41,7 @@ const NFTCompaignListing = () => {
         dispatch(setLoader(false));
         if (response?.statusCode === 200) {
           if (response?.payload?.length > 0) {
-            setCampaignData(response?.payload);
+            setCampaignData(response?.payload?.reverse());
           } else {
             setCampaignData([]);
           }

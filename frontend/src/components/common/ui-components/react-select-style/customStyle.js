@@ -72,7 +72,7 @@ export const customStyles = {
   }),
   input: (provided, state) => ({
     ...provided,
-    color: "white",
+    color: "12221A",
   }),
 
   singleValue: (provided) => ({

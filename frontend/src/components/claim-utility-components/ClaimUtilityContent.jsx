@@ -94,7 +94,7 @@ const ClaimUtilityContent = () => {
         //   error?.response?.data?.message ?? "something went wrong",
         //   "error"
         // );
-        navigate("/oops");
+       navigate("/oops");
       });
   };
   const checkIfClaimedAlready = (campaign_Id, userId) => {
@@ -208,8 +208,8 @@ const ClaimUtilityContent = () => {
             </TabComponentClaim>
           </div>
         </div>
-        <div className="text-center max-w-[600px] max-h-[570px] p-10 overflow-hidden">
-          <img className="inline  max-h-[530px]" src={campaignUtilitiesData?.[0]?.filePath} alt="icon" />
+        <div className="text-center  max-h-[570px] p-10 overflow-hidden">
+          <img className="inline max-w-[400px] max-h-[360px]" src={ campaignUtilitiesData?.[0]?.filePath} alt="icon" />
         </div>
       </div>
       {openClaimModal && (
