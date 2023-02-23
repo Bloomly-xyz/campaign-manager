@@ -68,7 +68,6 @@ const ClaimUtilityContent = () => {
       .then((response) => {
         dispatch(setLoader(false));
         if (response?.statusCode === 200) {
-          debugger;
            checkEndDate(response?.payload?.campaignEndDate);
           setCampaignData(response?.payload);
           checkIfClaimedAlready(response?.payload?.id, response?.payload?.userId)
@@ -160,12 +159,12 @@ const ClaimUtilityContent = () => {
                   </TabClaim>
                 {/* )} */}
                 {/* {campaignData?.digital && ( */}
-                  <TabClaim openTab={openTab} setOpenTab={setOpenTab} value={2}>
+                  <TabClaim openTab={openTab} setOpenTab={setOpenTab} value={2} tooltip={true}>
                     Digital
                   </TabClaim>
                 {/* )} */}
                 {/* {campaignData?.experencial && ( */}
-                  <TabClaim openTab={openTab} setOpenTab={setOpenTab} value={3}>
+                  <TabClaim openTab={openTab} setOpenTab={setOpenTab} value={3} tooltip={true}>
                     Experiential
                   </TabClaim>
                 {/* )} */}

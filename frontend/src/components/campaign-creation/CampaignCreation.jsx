@@ -68,7 +68,8 @@ const CampaignCreation = () => {
   const [selectCollection, setSelectCollection] = useState(1);
 
   //// Step 3,4 State
-  const [utilitiesListing, setUtilitiesListing] = useState([])
+  const [utilitiesListing, setUtilitiesListing] = useState([]);
+  const [filterData, setFilterData] = useState(utilitiesListing);
   const [selectedUtility, setSelectedUtility] = useState();
   const [openUtilityForm, setOpenUtilityForm] = useState(false);
 
@@ -298,7 +299,8 @@ const CampaignCreation = () => {
   const fetchUtilities = () => {
     utilityService.get_utilities().then((resp) => {
       if (resp?.payload) {
-        setUtilitiesListing(resp?.payload)
+        setUtilitiesListing(resp?.payload);
+        setFilterData(resp?.payload)
       }
     }).catch((error) => {
 
@@ -363,6 +365,8 @@ const CampaignCreation = () => {
               selectedUtility={selectedUtility}
               setActiveStep={setActiveStep}
               utilitiesListing={utilitiesListing}
+              setUtilitiesListing={setUtilitiesListing}
+              filterData={filterData}
             />
           )}
         </>

@@ -15,7 +15,7 @@ import PhysicalUtility from './AttachUtilityComponents/PhysicalUtility';
 
 
 const AttachUtility = (props) => {
-  const { selectedUtility, setSelectedUtility, setOpenUtilityForm, setActiveStep, utilitiesListing } = props;
+  const { selectedUtility, setSelectedUtility, setOpenUtilityForm, setActiveStep, utilitiesListing,setUtilitiesListing ,filterData } = props;
   const [openTab, setOpenTab] = useState(1);
   const data = utilitiesListing?.map((data, i) => {
     return {
@@ -34,7 +34,7 @@ const AttachUtility = (props) => {
     <>
       <div className="p-6 rounded-3xl">
         <div className='max-w-[714px] mb-6'>
-          <SearchComponent />
+          <SearchComponent filterData={filterData} setUtilitiesListing={setUtilitiesListing}/>
         </div>
         <div>
           <TabComponent>

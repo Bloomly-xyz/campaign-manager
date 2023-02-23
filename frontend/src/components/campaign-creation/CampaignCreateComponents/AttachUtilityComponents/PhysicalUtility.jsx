@@ -1,46 +1,72 @@
-import React from 'react'
-import AttachUtilityCheckbox from './AttachUtilityCheckbox';
+import React from "react";
+import AttachUtilityCheckbox from "./AttachUtilityCheckbox";
 
 const PhysicalUtility = (props) => {
-    const {selectedUtility ,setSelectedUtility ,setOpenUtilityForm ,setActiveStep ,data} =props;
+  const {
+    selectedUtility,
+    setSelectedUtility,
+    setOpenUtilityForm,
+    setActiveStep,
+    data,
+  } = props;
 
-    const handleUtilitySelection = (data) => {
-       console.log(data)
-        setSelectedUtility(data)
-    }
+  const handleUtilitySelection = (data) => {
+    console.log(data);
+    setSelectedUtility(data);
+  };
 
-    const handleUtilityForm = () => {
-        
-        setOpenUtilityForm(true)
-    }
-   
-    const handleBack =() => {
-     
-      setActiveStep(2)
-    }
+  const handleUtilityForm = () => {
+    setOpenUtilityForm(true);
+  };
+
+  const handleBack = () => {
+    setActiveStep(2);
+  };
   return (
     <>
-     {data?.map((item,index) => (
+      {data?.length > 0 ? (
         <>
-     {item.type === 'Physical' && <AttachUtilityCheckbox key={index} data={item} selectedUtility={selectedUtility} onChange={handleUtilitySelection} /> }  
-    </>))}
-   <div className="grid grid-cols-2 gap-4 ">
-        <div className="max-w-[526px] ">
-          <div className="flex ">
-            <button className="mr-6 btn-secondary " onClick={handleBack}>Back</button>
-            <button className=" btn-primary" onClick={handleUtilityForm} >
-            Continue
-            </button>
+          {data?.map((item, index) => (
+            <>
+              {item.type === "Physical" && (
+                <AttachUtilityCheckbox
+                  key={index}
+                  data={item}
+                  selectedUtility={selectedUtility}
+                  onChange={handleUtilitySelection}
+                />
+              )}
+            </>
+          ))}
+          <div className="grid grid-cols-2 gap-4 ">
+            <div className="max-w-[526px] ">
+              <div className="flex ">
+                <button className="mr-6 btn-secondary " onClick={handleBack}>
+                  Back
+                </button>
+                <button className=" btn-primary" onClick={handleUtilityForm}>
+                  Continue
+                </button>
+              </div>
+            </div>
+            <div className="flex justify-end">
+              <button className="text-[#12221A] text-base font-semibold">
+                Cancel
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="flex justify-end">
-          <button className="text-[#12221A] text-base font-semibold">
-            Cancel
-          </button>
-        </div>
-      </div>
+        </>
+      ) : (
+        <>
+          <div className="my-6">
+            <h4 className="text-center font-bold text-[#12221A] ">
+              Records not found
+            </h4>
+          </div>
+        </>
+      )}
     </>
-  )
-}
+  );
+};
 
-export default PhysicalUtility
+export default PhysicalUtility;
