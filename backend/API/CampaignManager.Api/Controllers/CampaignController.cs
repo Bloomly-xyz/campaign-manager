@@ -17,45 +17,33 @@ namespace CampaignManager.Api.Controllers
         {
             _campaignService= campaignService;
         }
+
         /// <summary>
-        /// Create Campaign.
+        /// Create Campaign request, If user is a creator and want to create Utilities against his public collection, can provide his/her contract address along with other required information, our system will crate a utility based on the given creator data.
         /// </summary>
-        /// <param name="CampaignRequest"></param> 
+        /// <param name="campaignRequestModel"></param>
         /// <returns></returns>
         /// <remarks>
         /// Sample request:
         ///
         ///     POST /api/Campaign/create_campaign
-        ///             {
-        ///               "stepsEnum": 3,
-        ///               "id": 0,
-        ///               "campaignUuid": "126052d4-4919-4a13-bc72-22c1ccf7ae76",
-        ///               "campaignName": "Bloomly NFT Campaign",
-        ///               "campaignDescription": "Test Campaign",
-        ///               "campaignStartDate": "2023-02-16T13:25:51.409Z",
-        ///               "campaignEndDate": "2023-02-16T13:25:51.409Z",
-        ///               "contractAddress": "0x737fc5ff6c669b8f",
-        ///               "contractName": "CampaignManagerNFT",
-        ///               "contractStoragePath": "CampaignManagerNFTCollection",
-        ///               "collectionPublicPath": "CampaignManagerNFTCollection",
-        ///               "campaignJson": "string",
-        ///               "userId": 1,
-        ///               "campaignUtilities": [
-        ///                 {
-        ///                   "utilityId": 2,
-        ///                   "campaignUtilityJson": "JSON Value Physical"
-        ///                 },
-        ///             {
-        ///                   "utilityId": 3,
-        ///                   "campaignUtilityJson": "JSON Value Pgysical & Digital"
-        ///                 },
-        ///             {
-        ///                 "utilityId": 5,
-        ///                   "campaignUtilityJson": "JSON Value Pgysical & Digital & Experiential"
-        ///                 }
-        ///               ],
-        ///               "campaignPublicUrl": "http://localhost:5001/swagger/index.html"
-        ///             }
+        ///     {
+        ///       "stepsEnum":3,
+        ///       "id":0,
+        ///       "campaignUuid":"126052d4-4919-4a13-bc72-22c1ccf7ae76",
+        ///       "campaignName":"NFT Campaign",
+        ///       "campaignDescription":"Test Campaign",
+        ///       "campaignStartDate":"2023-02-16T13:25:51.409Z",
+        ///       "campaignEndDate":"2023-02-16T13:25:51.409Z",
+        ///       "contractAddress":"0x737fc5ff6c669b8f",
+        ///       "contractName":"CampaignManagerNFT",
+        ///       "contractStoragePath":"CampaignManagerNFTCollection",
+        ///       "collectionPublicPath":"CampaignManagerNFTCollection",
+        ///       "campaignJson":"string",
+        ///       "userId":1,
+        ///       campaignUtilities: "json",
+        ///       "campaignPublicUrl":"https://Campaignmanager.bloomly.xyz"
+        ///     }
         /// </remarks>
         /// <response code="200">Returns success response</response>
         /// <response code="500">If exception failed</response> 
@@ -73,14 +61,14 @@ namespace CampaignManager.Api.Controllers
         }
 
         /// <summary>
-        /// Get All Campaigns
+        /// Get All Campaigns, An API end point, which can fetch creator campaigns best on the user id. 
         /// </summary>
-        /// <param name="UserId"></param> 
+        /// <param name="userRequest"></param>
         /// <returns></returns>
         /// <remarks>
         /// Sample request:
         ///
-        ///     GET /api/Campaign/get_campaign
+        ///     POST /api/Campaign/get_campaign
         ///     {
         ///        "UserId": 1
         ///     }
@@ -101,7 +89,7 @@ namespace CampaignManager.Api.Controllers
         }
 
         /// <summary>
-        /// Get Campaign by Id
+        /// Get Campaign, An API end point which can fetch campaign data best on particular campaign id.
         /// </summary>
         /// <param name="CampaignUuid"></param> 
         /// <returns></returns>
@@ -128,9 +116,9 @@ namespace CampaignManager.Api.Controllers
                 return GenericApiResponse(result.payload, "Success", HttpStatusCode.OK);
         }
         /// <summary>
-        /// Get Campaign Claim Details
+        /// Get Campaign, An API end point which can return all users who claimed the NFT with respect to given campaign UUId.
         /// </summary>
-        /// <param name="UserId"></param> 
+        /// <param name="CampaignUuid">Campaign Id(Parameter) required for calling this API.</param>
         /// <returns></returns>
         /// <remarks>
         /// Sample request:

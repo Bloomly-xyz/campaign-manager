@@ -65,13 +65,19 @@ namespace CampaignManager.Api.Controllers
         }
 
         /// <summary>
-        /// Claim Utility.
+        /// Claim Utility, An API endpoint for the users how have an opportunity to claim the utility if user got an NFT in his wallet. 
         /// </summary>
         /// <returns></returns>
         /// <remarks>
         /// Sample request:
         ///
-        ///     Get /api/Utility/claim_utility
+        ///     POST /api/Utility/claim_utility
+        ///     {
+        ///         ClaimJson: "Form data in json format",
+        ///         UserId: 1,
+        ///         CampaignId: 1,
+        ///         BlockChainTransactionId: "Block-chain transaction id"
+        ///     }
         /// </remarks>
         /// <response code="200">Returns success response</response>
         /// <response code="500">If exception failed</response> 
@@ -89,7 +95,7 @@ namespace CampaignManager.Api.Controllers
         }
 
         /// <summary>
-        /// Get Claimed Utility.
+        /// Get Claimed Utility, An API end point which can validate user has already claim the utility or not.
         /// </summary>
         /// <returns></returns>
         /// <remarks>
