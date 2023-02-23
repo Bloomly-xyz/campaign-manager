@@ -6,7 +6,6 @@ const AllUtility = (props) => {
    const {selectedUtility ,setSelectedUtility ,setOpenUtilityForm ,setActiveStep ,data,cancelBtnClickHandler} =props;
 
     const handleUtilitySelection = (data) => {
-      
       setSelectedUtility(data)
     }
 
@@ -37,7 +36,7 @@ const AllUtility = (props) => {
                 <button className="mr-6 btn-secondary " onClick={handleBack}>
                   Back
                 </button>
-                <button className=" btn-primary" onClick={handleUtilityForm}>
+                <button className=" btn-primary" onClick={handleUtilityForm} disabled={!selectedUtility?.value}>
                   Continue
                 </button>
               </div>
