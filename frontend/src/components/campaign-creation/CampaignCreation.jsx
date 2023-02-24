@@ -20,6 +20,7 @@ import PathExtractor from "../../helpers/PathExtractor";
 import Modal from "../common/modal-layout/Modal";
 import CopylinkModal from "../modals-components/CopylinkModal";
 import MintNftModal from "../modals-components/MintNftModal";
+import { countryListData } from "../../constants/dummy-data/country";
 
 
 
@@ -296,7 +297,7 @@ const CampaignCreation = () => {
     if (countriesData.length > 0) {
       setCountryData(countriesData);
     } else {
-      setCountryData([]);
+      setCountryData(countryListData);
     }
   };
   const fetchUtilities = () => {
