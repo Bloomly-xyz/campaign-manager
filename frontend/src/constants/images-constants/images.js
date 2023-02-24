@@ -44,7 +44,8 @@ import CapIcon from '../../assets/images/Captopshot.png';
 import NexusWhiteLogo from '../../assets/images/nexus-white-logo.svg';
 import NexusSidebarIcon from '../../assets/images/nexus-sidebar-icon.svg';
 import MerchIconWhite from "../../assets/images/merch-icon-white.svg";
-
+import ViewIcon from '../../assets/images/Eye On.svg';
+import AddMoreIcon from '../../assets/images/add more field icon.svg'
 const images = {
   LoginBg,
   AuthLogo,
@@ -91,6 +92,8 @@ const images = {
   CapIcon,
   NexusWhiteLogo,
   NexusSidebarIcon,
-  MerchIconWhite
+  MerchIconWhite,
+  ViewIcon,
+  AddMoreIcon
 };
 export default images;

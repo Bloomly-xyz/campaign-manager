@@ -43,13 +43,13 @@ const AttachUtility = (props) => {
                 ALL
               </Tab>
               <Tab openTab={openTab} setOpenTab={setOpenTab} value={2}>
-                Physical
+                Physical Utility
               </Tab>
               <Tab openTab={openTab} setOpenTab={setOpenTab} value={3}>
-                Digital
+                Digital Utility
               </Tab>
               <Tab openTab={openTab} setOpenTab={setOpenTab} value={4}>
-                Experiential
+                Experiential Utility
               </Tab>
 
             </TabHeader>

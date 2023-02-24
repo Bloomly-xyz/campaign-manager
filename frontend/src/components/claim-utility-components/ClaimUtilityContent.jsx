@@ -156,17 +156,17 @@ const ClaimUtilityContent = () => {
               <TabHeaderClaim>
                 {/* {campaignData?.physical && ( */}
                   <TabClaim openTab={openTab} setOpenTab={setOpenTab} value={1}>
-                    Physical
+                    Physical Utility
                   </TabClaim>
                 {/* )} */}
                 {/* {campaignData?.digital && ( */}
                   <TabClaim openTab={openTab} setOpenTab={setOpenTab} value={2} tooltip={true}>
-                    Digital
+                    Digital Utility
                   </TabClaim>
                 {/* )} */}
                 {/* {campaignData?.experencial && ( */}
                   <TabClaim openTab={openTab} setOpenTab={setOpenTab} value={3} tooltip={true}>
-                    Experiential
+                    Experiential Utility
                   </TabClaim>
                 {/* )} */}
               </TabHeaderClaim>
