@@ -1,0 +1,12 @@
+{
+  "testEnvironment": "node",
+  "collectCoverage": true,
+  "coverageReporters": [
+    "json",
+    "html"
+  ],
+  "verbose": true,
+  "coveragePathIgnorePatterns": [
+    "/node_modules/"
+  ]
+}
