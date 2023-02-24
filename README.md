@@ -1,4 +1,17 @@
 
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="https://github.com/Bloomly-xyz/campaign-manager/blob/main/Images/nexum%20logo.png" alt="Logo" >
+  </a>
+
+  <h3 align="center">Empowering the relationship between creator and their communities</h3>
+
+   
+</div>
+
+
 <a name="readme-top"></a>
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -33,9 +46,13 @@ Nexum solves this problem with a  two-ended solution. The first being an organiz
 
 From a community standpoint, Nexum eliminates the need to run to discord, twitter or other social platforms to find out the status of your utilities. It’s a hub that  tethers together and organizes your utilities across various collections by providing reminders, updates and notification so you never miss a V.I.P event or important date. </p>
  
-<img src="https://github.com/Bloomly-xyz/campaign-manager/blob/backend/Images/Nexum-image.png" alt="product" style="max-width: 100%;" /> 
+<img src="https://github.com/Bloomly-xyz/campaign-manager/blob/main/Images/Bloomly%20-%20Hackathon.png" style="max-width: 100%;" /> 
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🎬 Live Demo of [Nexum][Nexum-url]
+Check out the live demo of [Nexum][Nexum-url], deployed on the Flow Testnet. The demo involves the creator attaching a physical utility to their collection. The creator can also utilize the NBA Top Shot contract, which has been cloned for demo purposes only. Currently, the platform allows for attaching a physical utility and creating a claim page. Those who are part of the collection can then claim the utility.
+
  
 ## Main System Components:
 * **Cloud Flare**: Cloud flare may be used to have easy access to HTTPS and a certificate, and also to prevent DDOS.
@@ -53,66 +70,20 @@ Given below is the tech stack we have used in our application.
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
-* <a href="https://flow.com"><image src="https://github.com/Bloomly-xyz/campaign-manager/blob/backend/Images/flow.png" width="5%"/></a> 
+* <a href="https://flow.com"><image src="https://github.com/Bloomly-xyz/campaign-manager/blob/main/Images/Flow.com_wordmark_BlackText.png" width="12%"/></a> 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
 
 <!-- GETTING STARTED -->
 ## Getting Started
-1. Clone the repo
-   ```sh
-   git clone https://github.com/Bloomly-xyz/campaign-manager.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
 
-### Prerequisites
-
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Create .Env file in a backedn application
-2. Add following keys in the .Env file 
-  ```sh
-    #Connection String
-    ENVIRONMENT="DEVELOPMENT"
-    #ENVIRONMENT="QA"
-    #ENVIRONMENT="STAGING"
-    #ENVIRONMENT="PROD"
-    #ENVIRONMENT="LOCALHOST"
-    DEFAULTCONNECTION = "DB Connection string"
-    
-    #AWS S3 and Secret Manager Section
-    AccessKey= "Access Key"
-    SecretAccessKey= "Secret Access Key"
-    Region= "Region"
-
-    #Api Key
-    XApiKey= "API security key here"
- ```
- 
-
-3. Enter your API in `.Env`
-   ```sh
-    XApiKey = 'ENTER YOUR API';
-   ```
-4.  Add Datbase connection string in `.Env`
-   ```sh
-     DEFAULTCONNECTION = "DB Connection string"
-   ```
-5.  As we are using an entity framework "code first" approach you to have to run a few migrations.
-   ```sh
-    a. create-migration CreateNewDatabase
-    b. update-database
-   ```
-
+1. Install Dependencies <br/>
+🛠 This project requires NodeJS v18.x or above. See: [Node installation instructions][Node-url] <br/>
+🛠 This project requires flow-cli v46.0 or above. See: [Flow installation instructions][FlowCLI-url] <br/>
+🛠 This project requires Dotnet core 6.0 above. See: [Dot Net Core installation instructions][DotNetCore-Version_url] <br/>
+   
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
  
@@ -140,7 +111,7 @@ Given below is the tech stack we have used in our application.
 <!-- CONTACT -->
 ## Contact
 
-Email us on -  nasir@bloomly.xyz (Team Lead, Flow Ambassador)
+Email us on -  nasir@bloomly.xyz (Team Lead, [Flow Ambassador][Flow-Ambassador])
 
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -159,3 +130,8 @@ Email us on -  nasir@bloomly.xyz (Team Lead, Flow Ambassador)
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[FlowCLI-url]: https://developers.flow.com/tools/flow-cli
+[DotNetCore-Version_url]: https://learn.microsoft.com/en-us/dotnet/core/install/windows?tabs=net70
+[Node-url]: https://nodejs.org/en/download/
+[Flow-Ambassador]: https://flowambassadors.notion.site/Meet-Flow-Ambassadors-964a10f130394128b7e767ecd4d4e733
+[Nexum-url]: https://nexum.bloomly.xyz/login
