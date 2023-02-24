@@ -61,4 +61,41 @@ Blocto is a cross-chain smart contract wallet that currently supports Solana, Et
 * [Microsoft.CodeAnalysis.Analyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.Analyzers/) Analyzers for consumers of Microsoft.CodeAnalysis NuGet package, i.e. extensions and applications built on top of .NET Compiler Platform (Roslyn). This package is included as a development dependency of Microsoft.CodeAnalysis NuGet package and does not need to be installed separately if you are referencing Microsoft.CodeAnalysis NuGet package.
 * [xunit.analyzers](https://www.nuget.org/packages/xunit.analyzers) - xUnit.net is a developer testing framework, built to support Test Driven Development, with a design goal of extreme simplicity and alignment with framework features. Installing this package provides code analyzers to help developers find and fix frequent issues when writing tests and xUnit.net extensibility code.
 
+### Installation
+
+1. Create .Env file in a backedn application
+2. Add following keys in the .Env file 
+  ```sh
+    #Connection String
+    ENVIRONMENT="DEVELOPMENT"
+    #ENVIRONMENT="QA"
+    #ENVIRONMENT="STAGING"
+    #ENVIRONMENT="PROD"
+    #ENVIRONMENT="LOCALHOST"
+    DEFAULTCONNECTION = "DB Connection string"
+    
+    #AWS S3 and Secret Manager Section
+    AccessKey= "Access Key"
+    SecretAccessKey= "Secret Access Key"
+    Region= "Region"
+
+    #Api Key
+    XApiKey= "API security key here"
+ ```
+ 
+
+3. Enter your API in `.Env`
+   ```sh
+    XApiKey = 'ENTER YOUR API';
+   ```
+4.  Add Datbase connection string in `.Env`
+   ```sh
+     DEFAULTCONNECTION = "DB Connection string"
+   ```
+5.  As we are using an entity framework "code first" approach you to have to run a few migrations.
+   ```sh
+    a. create-migration CreateNewDatabase
+    b. update-database
+   ```
+
  
