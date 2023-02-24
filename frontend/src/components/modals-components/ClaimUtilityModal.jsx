@@ -10,6 +10,8 @@ import { setLoader } from "../../redux/slices/loading/loaderSlice";
 import Toast from "../../helpers/toast-component/Toast";
 import BlockChainTx from "../../BlockChainTx/BlockChainTx";
 import BlockChainErrorsHandler from "../../helpers/BlockChainErrorsHandler";
+import images from "../../constants/images-constants/images";
+import { Tooltip } from "@material-tailwind/react";
 
 const ClaimUtilityModal = (props) => {
   const dispatch = useDispatch();
@@ -46,10 +48,10 @@ const ClaimUtilityModal = (props) => {
         setOpenAlertModal(true);
         setAlertMessageContent({
           status: "success",
-          message: "Thank you for claiming",
-          closeBtnText:'Back to Asset',
+          message: "Thank you for claiming your utility",
+          closeBtnText:'Close demo',
           description:
-            "Lorem ipsum dolor sit amet consectetur. Nec arcu molestie elit dignissim proin mattis pellentesque. Sed enim ullamcorper ut ut.",
+            "Your journey into ongoing and managed NFT utility begins here! Creators and brands may continue to empower community members with additional utility and rewards.",
         });
 
       }
@@ -142,6 +144,17 @@ const ClaimUtilityModal = (props) => {
                 {errors?.other?.message}
               </p>
             </div>
+            <Tooltip 
+          className="text-[#12221A] px-4 py-1 rounded bg-white   max-w-[200px] relative z-50"
+          offset={10}
+          placement={"top-center"}
+          content={"coming soon "}
+        >
+            <div className="mb-10 inline-flex items-center ">
+              <img className="mr-[6px] opacity-[0.7]" src={images.AddMoreIcon} alt="addFieldsIcons"/>
+              <p className="text-white text-xs  w-full  font-medium bg-transparent  ">Add More Field</p>
+            </div>
+            </Tooltip>
             <button disabled={!isDirty || !isValid} className="btn-primary">
               Submit
             </button>

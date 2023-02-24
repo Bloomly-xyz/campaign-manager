@@ -20,7 +20,7 @@ const MenuItem = (props) => {
       >
         <Link to={(menu.value === 2 || menu.value === 3) ? "#" : menu.url} className={`flex items-center ${(menu.value === 2 || menu.value === 3) && 'cursor-not-allowed ' } `} >
           <img className="inline mr-4" src={menu.icon} alt="icon" />
-          <span className="text-sm font-bold text-white">{menu.title}</span>
+          <span className={`text-sm font-bold text-white  ${(menu.value ===2 || menu.value === 3 )&& 'text-white/70 ' }`}>{menu.title}</span>
         </Link>
       </li>
     </>
