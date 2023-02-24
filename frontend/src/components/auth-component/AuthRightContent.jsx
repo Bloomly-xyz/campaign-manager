@@ -4,9 +4,17 @@ const AuthRightContent = () => {
   return (
     <>
       <div className=" relative">
-        <h2 className="absolute text-5xl text-white font-bold top-[50%] left-[50%] w-[80%] -translate-x-[50%]">
-          To Get Started, Lets Connect Your Wallet
-        </h2>
+        <div className="absolute text-5xl text-white  top-[30%] left-[35%] w-[100%] max-w-[445px] -translate-x-[35%]">
+          <p className="text-2xl font-normal mb-2">Connecting Creators With Communities Or</p>
+          
+          <p className="text-[32px] font-bold mb-2">[nex-um] verb</p>
+          <p className="text-2xl font-bold mb-2"><span className="font-normal">Latin:{' '}</span> Connection</p>
+          <p className="text-2xl font-normal">English: Establishing
+
+            <span className="font-bold">{' '}connection{' '}</span>
+
+            between creators and communities</p>
+        </div>
       </div>
     </>
   );

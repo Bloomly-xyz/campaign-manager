@@ -16,11 +16,11 @@ import { COLUMNS } from "./NftCampaignListingComponent/NftCampaignColumns";
 import campaignService from "../../services/campaign.service";
 import { useDispatch, useSelector } from "react-redux";
 import { setLoader } from "../../redux/slices/loading/loaderSlice";
-import { Menu, MenuHandler, MenuList } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 const NFTCompaignListing = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState("all");
   const [openCreateCampaignModal, setOpenCreateCampaignModal] = useState(false);
   const [campaignData, setCampaignData] = useState([]);
@@ -73,27 +73,19 @@ const NFTCompaignListing = () => {
         disableSortBy: true,
         Cell: ({ row }) => (
           <>
-            <Menu>
-              <MenuHandler>
+            
+             
                 <div className="flex justify-center">
                   <img
+                   onClick={()=>{navigate(`/campaign-detail/${row.values.campaignUuid}`,{state : row?.values?.campaignName })}}
                     className="cursor-pointer "
-                    src={images.ActionIcon}
+                    src={images.ViewIcon}
                     alt="icon"
                   />
                 </div>
-              </MenuHandler>
-              <MenuList className="flex flex-col min-w-[100px] px-4 pt-3 pb-0 z-20">
-                <Link
-                to={`/campaign-detail/${row.values.campaignUuid}`}
-                state={ row?.values?.campaignName }
             
-                  className="inline-block px-0 pt-0 pb-3 text-xs text-[#12221A] font-medium focus-visible:outline-0 dark:focus-visible:bg-transparent focus-visible:bg-transparent font-poppins active:bg-transparent active:text-blue-500 hover:bg-transparent hover:text-blue-500"
-                >
-                  View
-                </Link>
-              </MenuList>
-            </Menu>
+              
+            
           </>
         ),
       },
@@ -147,7 +139,7 @@ const NFTCompaignListing = () => {
   const { globalFilter, pageIndex } = state;
   return (
     <>
-      <Header title="Campaigns" />
+      <Header title="Create your campaign and add your utility" />
       <div className="flex items-center mb-6">
         <button
           onClick={() => handleTabClick("all")}
@@ -163,7 +155,7 @@ const NFTCompaignListing = () => {
             activeTab === "physical" ? "bg-[#213E28] text-white" : "bg-white"
           } hover:text-white rounded-t font-bold text-base py-2 px-8  mr-3`}
         >
-          Physical
+          Physical Utility
         </button>
         <button
           disabled
@@ -172,7 +164,7 @@ const NFTCompaignListing = () => {
             activeTab === "digital" ? "bg-[#213E28] text-white" : "bg-white"
           }  hover:text-white rounded-t font-bold text-base py-2 px-8 cursor-not-allowed mr-3`}
         >
-          Digital
+          Digital Utility
         </button>
         <button
           disabled
@@ -183,7 +175,7 @@ const NFTCompaignListing = () => {
               : "bg-white"
           } hover:text-white rounded-t font-bold text-base py-2 px-8 cursor-not-allowed mr-3`}
         >
-          Experiential
+          Experiential Utility
         </button>
       </div>
       <div className="flex items-center justify-between mb-6">
