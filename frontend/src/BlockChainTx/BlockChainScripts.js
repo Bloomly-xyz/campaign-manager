@@ -10,9 +10,10 @@ import UtilityTracker from ${process.env.REACT_APP_UTILITYTRACKER}
 // by storing an empty moment collection and creating
 // a public capability for it
 transaction ( name: String, description: String, metaData: {String: String}, startTime: UFix64?, 
-            endTime: UFix64?, contractName: String, contractAddress:Address, 
-            userLimit: UInt64, nftIds:[UInt64], allowList:[Address], denylist:[Address], 
-            properties : {String: String}, other : {String: String} )
+    endTime: UFix64?, contractName: String, contractAddress:Address, 
+    storagePath: StoragePath, publicPath: PublicPath, 
+    userLimit: UInt64, nftIds:[UInt64], allowList:[Address], denylist:[Address], 
+    properties : {String: String}, other : {String: String} )
 {
 
     prepare(admin: AuthAccount,acct: AuthAccount) {
@@ -32,13 +33,9 @@ transaction ( name: String, description: String, metaData: {String: String}, sta
                             ?? panic("Could not borrow Client resource")
 
 
-        let collectionInfo = UtilityTracker.CollectionInfo(contractName: contractName, contractAddress: contractAddress, storagePath:/storage/Sham, publicPath:/public/Sham)
-        //let collectionInfo = UtilityTracker.CollectionInfo(contractName: "Sham", contractAddress: 0x01, storagePath:/storage/Sham, publicPath:/public/Sham)
-        let criteria = UtilityTracker.Criteria(userLimit: userLimit, nftIds:nftIds, allowList:allowList, denylist:denylist, properties : properties, other : other)
-        //let criteria = UtilityTracker.Criteria(userLimit: 2, nftIds:[], allowList:[], denylist:[], properties : {}, other : {})
-        
+        let collectionInfo = UtilityTracker.CollectionInfo(contractName: contractName, contractAddress: contractAddress, storagePath:storagePath, publicPath:publicPath)
+        let criteria = UtilityTracker.Criteria(userLimit: userLimit, nftIds:nftIds, allowList:allowList, denylist:denylist, properties : properties, other : other)        
         clientResource.createUtility(name: name, description: description, metaData: metaData, startTime: startTime, endTime: endTime, collectionInfo: collectionInfo, criteria: criteria)
-        //cleintResource.createUtility(name: "First Utility", description: "Its my utility", metaData: {}, startTime: 1676658229.0, endTime: 1677658229.0, collectionInfo: collectionInfo, criteria: criteria)
     }
 }`;
 

@@ -6,7 +6,7 @@ import CustomCheckbox from "../../common/ui-components/form-ui/CustomCheckbox";
 const SelectContract = (props) => {
   const { selectContract, handleChangeContract, setSteps, steps, setActiveStep, contractListing,
     NFTAddressSearchHandler, showErr, setShowErr, setNFTContractData, nftContractData, inputPathHandler,
-    nextBtnClickHandler,setOpenNftMintModal,cancelBtnClickHandler } = props;
+    nextBtnClickHandler,setOpenNftMintModal,cancelBtnClickHandler,demoRef } = props;
   const handleBack = () => {
     setActiveStep(1)
   }
@@ -30,6 +30,7 @@ const SelectContract = (props) => {
       contractAddress: process.env.REACT_APP_NBATOPSHOT_ADDRESS,
       isDemoCollection:true
     }));
+    demoRef.current=true;
     NFTAddressSearchHandler(process.env.REACT_APP_NBATOPSHOT_ADDRESS)
   }
   const populateStoragePath = (pathName) => {
