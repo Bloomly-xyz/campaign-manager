@@ -60,6 +60,7 @@ const CampaignCreation = () => {
     campaignPublicUrl: "",
     isDemoCollection: false
   });
+  const demoRef=useRef(false);
   const [contractListing, setSelectContractListing] = useState([])
   const [selectContract, setSelectContract] = useState(1);
   const [showErr, setShowErr] = useState(false);
@@ -145,7 +146,7 @@ const CampaignCreation = () => {
         setNFTContractData(prevState => ({
           ...prevState,
           contractName: contractPathsTemp?.[0]?.contractName,
-          contractStoragePath: contractPathsTemp?.[0]?.storagePaths?.[0] ?? "",
+          contractStoragePath:demoRef.current===true ?  contractPathsTemp?.[0]?.storagePaths?.[1] : contractPathsTemp?.[0]?.storagePaths?.[0] ?? "",
           collectionPublicPath: contractPathsTemp?.[0]?.collectionPaths?.[0] ?? ""
         }));
         setSelectContractListing(contractPathsTemp);
@@ -333,6 +334,7 @@ const CampaignCreation = () => {
           nextBtnClickHandler={nextBtnClickHandler}
           setOpenNftMintModal={setOpenNftMintModal}
           cancelBtnClickHandler={cancelBtnClickHandler}
+          demoRef={demoRef}
         />
       )}
       {activeStep === 2 && (

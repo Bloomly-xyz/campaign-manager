@@ -71,6 +71,8 @@ const createUtilityTx =async (utilityObj) => {
 
                 fcl.arg(utilityObj?.contractName, t.String),
               fcl.arg(utilityObj?.contractAddress, t.Address),
+              fcl.arg({ domain: "storage", identifier: utilityObj?.contractStoragePath }, t.Path),
+              fcl.arg({ domain: "public", identifier: utilityObj?.collectionPublicPath }, t.Path),
               fcl.arg(1, t.UInt64),
               fcl.arg([],t.Array(t.UInt64)),
               fcl.arg([],t.Array(t.Address)),
