@@ -99,4 +99,41 @@ describe("Contract deployments", () => {
     expect(contractAddress).toEqual(Alice);
   });
 
+  test(`T#${getTestNumber()}: UtilityTracker Contract Deployment`, async () => {
+    const contractName = contractNames.utilityTracker;
+    const Bob = await getAccountAddress(accountNames.bob);
+    let update = true;
+
+    const NonFungibleToken = await getContractAddress(
+      contractNames.nonFungibleToken
+    );
+
+    const MetadataViews = await getContractAddress(
+      contractNames.metadataViews
+    );
+
+    const addressMap = {
+      NonFungibleToken,
+      MetadataViews
+    };
+
+    //deploying contract to Bob accouont
+    let result = await deployContractByName({
+      name: contractName,
+      to: Bob,
+      update,
+      addressMap,
+    });
+
+    //check if result instance is not null & expception is null
+    expect(result[0]).not.toBeNull();
+    expect(result[1]).toBeNull();
+
+    //fetch contract address
+    let contractAddress = await getContractAddress(contractName);
+
+    expect(contractAddress).toEqual(Bob);
+  });
+
+
 });

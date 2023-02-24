@@ -30,22 +30,40 @@ const accountNames = {
 
 const contractNames = {
   nonFungibleToken: "NonFungibleToken",
-  metadataViews: "MetadataViews"
+  metadataViews: "MetadataViews",
+  utilityTracker: "UtilityTracker"
 };
 const transactionEntities = {
+  UtilityTrackerClient: "UtilityTracker/Client",
+  UtilityTrackerUser: "UtilityTracker/Dapp",
+  UtilityTrackerAdmin: "UtilityTracker/Admin",
   FungibleToken: "FungibleToken"
+
 }
 const transactions = {
+  setupDappResource: `${transactionEntities.UtilityTrackerAdmin}/setup_dapp_resource`,
+  setupClientResource: `${transactionEntities.UtilityTrackerAdmin}/setup_client_resource`,
+  createUtility: `${transactionEntities.UtilityTrackerClient}/create_utility`,
+  updateUtility: `${transactionEntities.UtilityTrackerClient}/update_utility`,
+  removeUtility: `${transactionEntities.UtilityTrackerClient}/remove_utility`,
+  claimUtility: `${transactionEntities.UtilityTrackerUser}/claim_utility`,
+
   mintFT: `${transactionEntities.FungibleToken}/mint_ft`,
   transferFlow: `${transactionEntities.FungibleToken}/transfer_flow`,
 };
 
 const scriptEntities = {
+  UtilityTracker: "UtilityTracker",
   FungibleToken: "FungibleToken"
 }
 
 const scripts = {
+  getAllUtilities: `${scriptEntities.UtilityTracker}/get_all_utilities`,
+  getUtilityById: `${scriptEntities.UtilityTracker}/get_utility_by_id`,
+  getAllClaimedUtilities: `${scriptEntities.UtilityTracker}/get_all_claimed_utilities`,
+  isUserCapable: `${scriptEntities.UtilityTracker}/is_user_capable`,
   getUserBalance: `${scriptEntities.FungibleToken}/get_user_balance`,
+
 };
 
 const minBalance = 0.0001;
@@ -60,6 +78,11 @@ const flowConfig = {
 };
 
 const timeoutLimit = 100000;
+
+const utility_dapp = {
+  utilityName: "First Utility",
+  utilityDescription: "This is my first utility",
+};
 
 const error_messages = {
   invalid_contract_name: "Invalid Contract Name",
@@ -84,6 +107,7 @@ export {
   testingTokenAmount,
   flowConfig,
   timeoutLimit,
+  utility_dapp,
   error_messages,
   getTestNumber
 };

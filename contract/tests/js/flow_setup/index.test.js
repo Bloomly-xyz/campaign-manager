@@ -276,5 +276,8 @@ describe("Flow Setup", () => {
     expect(+bobBalanceAfter[0]).toBeGreaterThanOrEqual(+amount);
 
   });
-  
+
+
+
+
 });

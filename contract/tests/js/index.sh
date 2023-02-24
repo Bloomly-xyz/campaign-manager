@@ -16,5 +16,9 @@ npm test -- ./flow_setup/index.test.js -- --coverage -collectCoverageFrom=./flow
 #Run contract deployment
 npm test -- ./contract_deployments.test.js -- --coverage -collectCoverageFrom=./contract_deployments.test.js
 
+#Run utility user-stories
+npm test -- ./UtilityTracker/user_stories.test.js -- --coverage -collectCoverageFrom=./UtilityTracker/user_stories.test.js
+
+
 # #Close the emulator tab
 # gnome-terminal --tab --title=flowEmulator -- bash -c "exit ; exec bash" 
