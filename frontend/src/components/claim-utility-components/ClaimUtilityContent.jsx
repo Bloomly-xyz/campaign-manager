@@ -209,8 +209,8 @@ const ClaimUtilityContent = () => {
             </TabComponentClaim>
           </div>
         </div>
-        <div className="text-center  max-h-[570px] p-10 overflow-hidden">
-          <img className="inline max-w-[400px] max-h-[360px]" src={ campaignUtilitiesData?.[0]?.filePath} alt="icon" />
+        <div className="text-center max-w-[586px] max-h-[586px] py-[123px] px-[63px] mx-auto overflow-hidden">
+          <img className="inline max-w-[458px] max-h-[340px]" src={ campaignUtilitiesData?.[0]?.filePath} alt="icon" />
         </div>
       </div>
       {openClaimModal && (
