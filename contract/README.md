@@ -12,7 +12,7 @@ Utility Tracker is a Smart Contract which record or trace NFT utilities.
 
 - ### Install Dependencies
 
-  _🛠 This project requires `flow-cli v0.39.2` or above._ See: [Flow CLI installation instructions](https://docs.onflow.org/flow-cli)
+  _🛠 This project requires `flow-cli v0.46.0` or above._ See: [Flow CLI installation instructions](https://docs.onflow.org/flow-cli)
 
 - ### Clone the project
 
