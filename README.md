@@ -97,7 +97,7 @@ Given below is the tech stack we have used in our application.
 ## Roadmap
 
 - [x] R&D on initial product 
-- [x] Meta View Standard Smart Contract 
+- [x] Utility Tracker Smart Contract Implementation 
 - [x] Physical Utility Integration 
 - [x] Backend Code Setup
 - [x] Frontend Code Setup
