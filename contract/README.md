@@ -23,4 +23,4 @@ Utility Tracker is a Smart Contract which record or trace NFT utilities.
 
 ## Test Cases (using Javascript)
 
-TODO
+See the [Documentation](tests/js/README.md) for instructions about how to run the automated tests and its struture.
