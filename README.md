@@ -82,7 +82,12 @@ Given below is the tech stack we have used in our application.
 🛠 This project requires NodeJS v18.x or above. See: [Node installation instructions][Node-url] <br/>
 🛠 This project requires flow-cli v46.0 or above. See: [Flow installation instructions][FlowCLI-url] <br/>
 🛠 This project requires Dotnet core 6.0 above. See: [Dot Net Core installation instructions][DotNetCore-Version_url] <br/>
-   
+
+
+## Our Product Breakdown
+ 1. [Backend Code Repo][Backend-Code Repo] 
+ 2. [Frontend Code Repo][Frontend-Code-Repo]
+ 3. [Cadence Smart Contract][Cadence-Smart-Contract]
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -135,3 +140,6 @@ Email us on -  nasir@bloomly.xyz (Team Lead, [Flow Ambassador][Flow-Ambassador])
 [Node-url]: https://nodejs.org/en/download/
 [Flow-Ambassador]: https://flowambassadors.notion.site/Meet-Flow-Ambassadors-964a10f130394128b7e767ecd4d4e733
 [Nexum-url]: https://nexum.bloomly.xyz/login
+[Backend-Code Repo]: https://github.com/Bloomly-xyz/campaign-manager/tree/main/backend
+[Frontend-Code-Repo]: https://github.com/Bloomly-xyz/campaign-manager/tree/main/frontend
+[Cadence-Smart-Contract]: https://github.com/Bloomly-xyz/campaign-manager/tree/main/contract
