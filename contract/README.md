@@ -1,5 +1,5 @@
-# Compaign Manager Contracts
-This repository will contain all basic smart-contracts on Flow Blockchain. 
+# Campaign Manager Contracts
+This repository will contain all basic smart-contracts on Flow Blockchain. Read more about how our smart contract is built [here](docs/Utility_Tracker.md)
 
 ## Utility Tracker Contract
 
