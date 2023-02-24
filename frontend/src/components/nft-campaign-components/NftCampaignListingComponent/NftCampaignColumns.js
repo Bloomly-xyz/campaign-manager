@@ -12,8 +12,8 @@ export const COLUMNS = [
     accessor: "campaignName",
   },
   {
-    Header: "Utilities",
-    Footer: "Utilities",
+    Header: "Utility Type",
+    Footer: "Utility Type",
     accessor: "physical",
     Cell: ({ row }) => (
     

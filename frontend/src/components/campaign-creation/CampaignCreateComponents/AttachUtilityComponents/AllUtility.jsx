@@ -22,6 +22,9 @@ const AllUtility = (props) => {
     <>
     {data?.length > 0 ? (
         <>
+        <div className=''>
+
+        
           {data?.map((item, index) => (
             <AttachUtilityCheckbox
               key={index}
@@ -30,6 +33,7 @@ const AllUtility = (props) => {
               onChange={handleUtilitySelection}
             />
           ))}
+          </div>
           <div className="grid grid-cols-2 gap-4 ">
             <div className="max-w-[526px] ">
               <div className="flex ">
