@@ -17,8 +17,7 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
+    </li> 
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li> 
   </ol>
@@ -27,12 +26,14 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project :  
-<p>Empowering the relationship between creator and their communities.</p>
+## About The Project:  
+<p>The nft utility industry has enjoyed some incredible success, however it suffers greatly with respect to tracking and communicating important brand utilities associated to nft collections. Imagine a person with hundreds of nfts that have ongoing utility ranging from physical, experiential and/or digital utility. How could someone keep up with all the redemptions offered with each nft?
+
+Nexum solves this problem with a  two-ended solution. The first being an organized approach for any brand or creator to create and track utility against any collection and its respective community. Imagine a brand creator knowing who their most influential community members are thus allowing them to further incentivize their prowess? 
+
+From a community standpoint, Nexum eliminates the need to run to discord, twitter or other social platforms to find out the status of your utilities. It’s a hub that  tethers together and organizes your utilities across various collections by providing reminders, updates and notification so you never miss a V.I.P event or important date. </p>
  
 <img src="https://github.com/Bloomly-xyz/campaign-manager/blob/backend/Images/Nexum-image.png" alt="product" style="max-width: 100%;" /> 
-
-Up until now, there are thousands of NFT projects in the market, some successful and some rug pulls. The missing piece is the value or utility it provides. The successful drops share their utility in discord or twitter posts. If you’re not waking up and tweeting #wagmi you’re missing out. This is where our campaign manager comes in. It attaches utility to your nft collection and presents it to your community who can then claim it. Once claimed, the creator can provide further value to the community based on their engagement and the community stays up to date by receiving notifications thus no longer having to scroll thru feeds & tons of messages
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
@@ -52,11 +53,10 @@ Given below is the tech stack we have used in our application.
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
-* <a href="https://flow.com//"><image src="https://github.com/Bloomly-xyz/campaign-manager/blob/backend/Images/flow.png" width="5%"/></a> 
+* <a href="https://flow.com"><image src="https://github.com/Bloomly-xyz/campaign-manager/blob/backend/Images/flow.png" width="5%"/></a> 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+ 
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -115,45 +115,32 @@ Given below is the tech stack we have used in our application.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-The nft utility industry has enjoyed some incredible success, however it suffers greatly with respect to tracking and communicating important brand utilities associated to nft collections. Imagine a person with hundreds of nfts that have ongoing utility ranging from physical, experiential and/or digital utility. How could someone keep up with all the redemptions offered with each nft?
-
-Nexum solves this problem with a  two-ended solution. The first being an organized approach for any brand or creator to create and track utility against any collection and its respective community. Imagine a brand creator knowing who their most influential community members are thus allowing them to further incentivize their prowess? 
-
-From a community standpoint, Nexum eliminates the need to run to discord, twitter or other social platforms to find out the status of your utilities. It’s a hub that  tethers together and organizes your utilities across various collections by providing reminders, updates and notification so you never miss a V.I.P event or important date. 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+ 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] R&D
-- [x] Initial Smart Contract
-- [x] Physical Utility 
+- [x] R&D on initial product 
+- [x] Meta View Standard Smart Contract 
+- [x] Physical Utility Integration 
 - [x] Backend Code Setup
-- [x] Frontend Code Setup 
-- [ ] Experiencial Utility
-- [ ] Digital Utility
-- [ ] Customize Theams for creators
-- [ ] Cross Domains SmartContract 
-	- [ ] ETH Blockchain 
-	- [ ] WAX Blockchain
-	- [ ] Solana Blockchain
+- [x] Frontend Code Setup
+- [x] Dynamic physical utility claim page 
+- [ ] Digital & Experiencial Utility Integration 
+- [ ] Integration within the Bloomly product
+- [ ] Social media stats & community score
+- [ ] Bloomly creators community
+- [ ] Mobile Application
+- [ ] A marketplace specific to utilities (Physical, digital & experiential)
+- [ ] Multichain SmartContract 
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-
+ 
 <!-- CONTACT -->
 ## Contact
 
-Email us on -  nasir@bloomly.xyz
+Email us on -  nasir@bloomly.xyz (Team Lead, Flow Ambassador)
 
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
