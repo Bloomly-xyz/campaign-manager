@@ -84,10 +84,10 @@ Given below is the tech stack we have used in our application.
 🛠 This project requires Dotnet core 6.0 above. See: [Dot Net Core installation instructions][DotNetCore-Version_url] <br/>
 
 
-## Our Product Breakdown
- 1. [Backend Code Repo][Backend-Code Repo] 
- 2. [Frontend Code Repo][Frontend-Code-Repo]
- 3. [Cadence Smart Contract][Cadence-Smart-Contract]
+## Our Product Breakdown <br/>
+  🥷 [Backend Code Repo][Backend-Code Repo] <br/>
+  👽 [Frontend Code Repo][Frontend-Code-Repo]<br/>
+  🤖 [Cadence Smart Contract][Cadence-Smart-Contract]<br/>
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
