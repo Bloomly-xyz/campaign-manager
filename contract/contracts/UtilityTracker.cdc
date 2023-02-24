@@ -1,7 +1,7 @@
 
 pub contract UtilityTracker {
 
-     // Events
+    // Events
     pub event ContractInitialized()
     pub event UtilityCreated(utilityId: UInt64, name: String, startTime: UFix64, endTime: UFix64?, userLimit: UInt64)
     pub event UtilityUpdated(utilityId: UInt64, name: String, startTime: UFix64, endTime: UFix64?, userLimit: UInt64)
@@ -234,9 +234,33 @@ pub contract UtilityTracker {
         }
 
     }
-    
-    init(){
 
+    pub fun getAllUtilities():{UInt64: Utility}{
+        return self.allUtilities
+    }
+
+    pub fun getUtilityById(utilityId:UInt64): Utility?{
+        return self.allUtilities[utilityId]
+    }
+
+    pub fun getAllClaimedUtilities():{UInt64: {Address: UInt64}}{
+        return self.claimedUtilties
+    }
+
+    pub fun getClaimedUtilityById(utilityId:UInt64):{Address: UInt64}?{
+        return self.claimedUtilties[utilityId]
+    }
+
+    pub fun getAllUserClaimedUtilities():{Address: {UInt64:UInt64}}{
+        return self.claimedUtiltiesByAddress
+    }
+
+    pub fun getUserAllClaimedUtilities(address: Address):{UInt64:UInt64}?{
+        return self.claimedUtiltiesByAddress[address]
+    }
+
+
+    init(){
         self.lastIssuedUtilityId = 0
         self.allUtilities = {}
         self.claimedUtilties = {}
@@ -250,4 +274,5 @@ pub contract UtilityTracker {
         emit ContractInitialized()
 
     }
+    
 }
