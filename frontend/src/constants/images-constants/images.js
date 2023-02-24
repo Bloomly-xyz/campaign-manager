@@ -41,7 +41,7 @@ import CopyIcon from '../../assets/images/copyIcon.svg';
 import ClaimedCheckedIcon from '../../assets/images/Circle-checked-icon.svg';
 import NexusLogo from '../../assets/images/nexum-logo.svg';
 import CapIcon from '../../assets/images/Captopshot.png';
-import NexusWhiteLogo from '../../assets/images/nexus-white-logo.svg';
+import NexusWhiteLogo from '../../assets/images/Bloomly_White.svg';
 import NexusSidebarIcon from '../../assets/images/nexus-sidebar-icon.svg';
 import MerchIconWhite from "../../assets/images/merch-icon-white.svg";
 import ViewIcon from '../../assets/images/Eye On.svg';
