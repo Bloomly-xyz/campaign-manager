@@ -1,4 +1,4 @@
-# Campaign Manager - [Swagger](https://campaignmanager-api.bloomly.xyz/swagger/index.html)
+# Campaign Manager - [Swagger](https://campaignmanager-api.bloomly.xyz/swagger/index.html) / [API Documentation](https://campaignmanager-api.bloomly.xyz/api-docs/index.html)
 
 **The problem it solves:** The aim and objectives of our project, and why should people use it?
 
