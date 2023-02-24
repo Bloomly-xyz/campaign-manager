@@ -152,7 +152,7 @@ const ClaimUtilityModal = (props) => {
         >
             <div className="mb-10 inline-flex items-center ">
               <img className="mr-[6px] opacity-[0.7]" src={images.AddMoreIcon} alt="addFieldsIcons"/>
-              <p className="text-white text-xs  w-full  font-medium bg-transparent  ">Add More Field</p>
+              <p className="text-white text-xs  w-full  font-medium bg-transparent  ">Add More Fields</p>
             </div>
             </Tooltip>
             <button disabled={!isDirty || !isValid} className="btn-primary">
